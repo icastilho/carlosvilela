@@ -1,0 +1,26 @@
+{
+  "name": "carlosvilela",
+  "version": "0.0.0",
+  "authors": [
+    "icastilho <italorfc@gmail.com>"
+  ],
+  "description": "Portifolio Carlos Vilela",
+  "main": "js/main.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "CV"
+  ],
+  "license": "MIT",
+  "homepage": "carlosvilela.com.br",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ]
+}

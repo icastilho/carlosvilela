@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('/src/font/montserrat/Montserrat-Black.otf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('/src/font/montserrat/Montserrat-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Hairline';
+    src: url('/src/font/montserrat/Montserrat-Hairline.otf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('/src/font/montserrat/Montserrat-Light.otf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('/src/font/montserrat/Montserrat-Regular.otf');
+}
+
+span.fm  {
+}
+p.fm-bold {
+    font-family: Montserrat-Bold;
+}
+
+p.fm-hairline  {
+    font-family: Montserrat-Hairline;
+}
+
+p.fm-light  {
+    font-family: Montserrat-Light;
+}
+p.fm-regular  {
+    font-family: Montserrat-Regular;
+}
+p.fm-small  {
+    font-size: 12pt;
+}
+p.fm-medium {
+    font-size: 18pt;
+}
+p.fm-high {
+    font-size: 30pt;
+}
+
