@@ -1,51 +1,72 @@
 @font-face {
-    font-family: 'Montserrat-Black';
-    src: url('/src/font/montserrat/Montserrat-Black.otf');
+    font-family: 'montserratblack';
+    src: url('../../src/font/montserrat/Montserrat-Black.otf');
 }
 
 @font-face {
-    font-family: 'Montserrat-Bold';
-    src: url('/src/font/montserrat/Montserrat-Bold.otf');
+    font-family: 'montserratbold';
+    src: url('../../src/font/montserrat/Montserrat-Bold.otf');
 }
 
 @font-face {
-    font-family: 'Montserrat-Hairline';
-    src: url('/src/font/montserrat/Montserrat-Hairline.otf');
+    font-family: 'montserrathairline';
+    src: url('../../src/font/montserrat/Montserrat-Hairline.otf');
 }
 
 @font-face {
-    font-family: 'Montserrat-Light';
-    src: url('/src/font/montserrat/Montserrat-Light.otf');
+    font-family: 'montserratlight';
+    src: url('../../src/font/montserrat/Montserrat-Light.otf');
 }
 
 @font-face {
-    font-family: 'Montserrat-Regular';
-    src: url('/src/font/montserrat/Montserrat-Regular.otf');
+    font-family: 'montserratregular';
+    src: url('../../src/font/montserrat/Montserrat-Regular.otf');
 }
 
 span.fm  {
 }
 p.fm-bold {
-    font-family: Montserrat-Bold;
+    font-family: montserratbold;
 }
 
 p.fm-hairline  {
-    font-family: Montserrat-Hairline;
+    font-family: montserrathairline;
 }
 
 p.fm-light  {
-    font-family: Montserrat-Light;
+    font-family: montserratlight;
 }
 p.fm-regular  {
-    font-family: Montserrat-Regular;
+    font-family: montserratregular;
 }
-p.fm-small  {
+p.fm-small {
     font-size: 12pt;
 }
 p.fm-medium {
     font-size: 18pt;
 }
 p.fm-high {
-    font-size: 30pt;
+    font-size: 25pt;
+}
+p.fm-italic {
+    font-style: italic;
+}
+
+p.fm-d-small {
+    font-size: 12pt;
+}
+p.fm-d-medium {
+    font-size: 15pt;
+}
+
+p.fm-space-low {
+    letter-spacing: 5px;
+}
+p.fm-space-high {
+    letter-spacing: 15px;
+}
+p.lightless {
+    margin-top: 4px;
+    margin-bottom: -6px;
 }
 

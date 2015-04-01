@@ -57,13 +57,14 @@ a {
 .logo {
     padding-top: 13%;
     padding-bottom: 13%;
+    text-align: center;
 }
 
 img {
     max-width: 100%;
     height: auto;
 }
-nav {
+.menu > nav {
     background: #08213f  ;
     text-align: center;
 /*    -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.5);
@@ -71,17 +72,17 @@ nav {
     box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.5);*/
 }
 
-nav img{
+.menu > nav > img{
     margin: 30% 0 30% 0;
     width: 50%;
 }
 
-nav ul {
+.menu > nav > ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-nav ul li a {
+.menu > nav > ul > li > a {
     display: block;
     text-decoration: none !important;
     height: 60px;
@@ -89,10 +90,23 @@ nav ul li a {
     font-size: 18px;
     color: #145eb3;
 }
-nav ul li a:hover {
+.menu > nav > ul > li > a:hover {
     background: #165195 ;
     color:  #08213f;
 }
+
+ul .social {
+    margin: 0;
+    padding: 0;
+}
+
+ul  li .social {
+    display: inline-block !important;
+    width: 100px;
+    min-height: 100px;
+
+}
+
 article {
     position: relative;
     min-height: 1500px;
@@ -104,12 +118,12 @@ article h1 {
     text-align: center;
     margin: 40px 0 30px;
 }
-article p {
+/*article p {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 40px;
-}
-article a.toggle-nav {
+}*/
+article .toggle-nav {
     position: absolute;
     font-size: 25px;
     color: #165195;
@@ -119,10 +133,18 @@ article a.toggle-nav {
     height: 60px;
     line-height: 60px;
     text-align: center;
+    z-index: 10
 }
-article a.toggle-nav:hover {
+article .toggle-nav:hover {
     color: red;
 }
 i {
     color: #165195;
+}
+.itemhover {
+    position: absolute;
+    width: 100%;
+    top: 37%;
+    opacity: 0;
+    color: #FFF;
 }

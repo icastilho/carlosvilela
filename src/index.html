@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" ng-app="carlosvilela">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,61 +15,55 @@
         <link rel="stylesheet" href="css/diamonds.css">
         <link rel="stylesheet" href="css/slidemenu.css">
         <link rel="stylesheet" href="css/fonts.css">
+
     </head>
-    <body >
+    <body  ng-controller="MenuCtrl">
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Content Body -->
         <div class="site-wrap" >
-
-            <nav >
+            <nav class="menu">
                 <ul class="menu">
                     <li><img src="img/logo_canto.png"></li>
-                    <li><a href="#">.PORTIFOLIO</a></li>
-                    <li><a href="#">.ABAUT</a></li>
+                    <li><a href="#/portifolio">.PORTIFOLIO</a></li>
+                    <li><a href="#">.ABOUT</a></li>
                     <li><a href="#">.CONTACT</a></li>
+                </ul>
+
+                <ul class="social">
+                    <li><i class="fa fa-facebook"></i></li>
+                    <li><i class="fa fa-twitter"></i></li>
+                    <li><i class="fa fa-instagram"></i></li>
+                    <li><i class="fa fa-behance"></i></li>
+                    <li><i class="fa fa-linkedin"></i></li>
+                    <li><i class="fa fa-pinterest"></i></li>
                 </ul>
             </nav>
 
             <div class="push-wrap">
-                <article  >
-                    <div class="container-fluid" >
-                        <a href="#" class="toggle-nav"><i class="fa fa-bars"></i></a>
-                        <div class="container" >
-                            <div class="logo">
-                                <img src="img/logo.png">
-                            </div>
-                        </div>
-                    </div>
+                <article>
+                   <a href="" class="toggle-nav" ng-click="slidemenu()"><i class="fa fa-bars"></i></a>
+                    <!-- Content Body -->
 
-                    <div class="container-fluid">
-                        <div class="diamondswrap">
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_bicho.jpg"/></a>
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_riunite.jpg"/></a>
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_twistlove.jpg"/></a>
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_frido.jpg"/></a>
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_sth.jpg"/></a>
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_bonsonhos.jpg"/></a>
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_bicho.jpg"/></a>
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_up.jpg"/></a>
-                            <a href="#" class="item"><img src="img/portifolio/thumblr_twistlove.jpg"/></a>
-                        </div>
-                    </div>
+                    <div ng-view="" ></div>
+                    <!-- Content Body -->
                 </article>
             </div>
-
         </div>
 
-        <!-- Content Body -->
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript"  src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript"  src="js/vendor/jquery.diamonds.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <nav class="navbar navbar-default  navbar-fixed-bottom">
+            ......
+        </nav>
 
+        <script type="text/javascript" src="bower_components/angularjs/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.diamonds.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -78,61 +72,6 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-
-
-            // Normal Clicks
-            $(function() {
-
-                function openSidepage() {
-                    $('article').animate({
-                        left: '300px'
-                    },
-                    500, 'easeOutBack').promise().done(function (){
-                            $('body').toggleClass('show-nav');
-                            $('article').css('left', '0px');
-                    });
-                }
-
-                function closeSidepage(){
-                    $('body').toggleClass('show-nav');
-                    $('article').css('left', '300px');
-                    $('article').animate({
-                        left: '0px'
-                    }, 500, 'easeOutQuint');
-                }
-
-                function slidemenu(e){
-                    e.preventDefault();
-                    var className = $('body').attr('class');
-                    if(className != "show-nav" ) {
-                        openSidepage();
-                    }else{
-                        closeSidepage();
-                    }
-                }
-
-                $('.toggle-nav').on("click", function(e){
-                    slidemenu(e);
-                });
-
-                $(".diamondswrap").diamonds({
-                    size : 410,
-                    gap : 1,
-                    hideIncompleteRow :true,
-                    autoRedraw :true,
-                    itemSelector : ".item"
-                })
-
-                $('.item img').hover(
-                    function(){
-                        $(this).animate({
-                            opacity: 0.25
-                        }, 500);
-                    },
-                    function(){
-                        $(this).stop().css('opacity', 1);
-                    });
-            });
 
         </script>
     </body>
