@@ -1,22 +1,46 @@
+<!doctype html>
+<html class="no-js" ng-app="carlosvilela">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
 <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" >
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" >
 <style>
     .footer {
-        position: absolute;
         width: 100%;
-        top: 37%;
-        color: #FFF;
     }
     .f-center{
         text-align: center;
     }
-    .f-inlb{
-        display: inline-flex!important;
+    .f-left{
+        text-align: left;
+    }
+    ul.foo-ul{
+        margin: 0;
+        padding: 0;
+    }
+    .foo-ul li {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        max-width: 25%;
+        color: #FFF;
+    }
+    .foo-ul li.line {
+        width: auto;
+    }
+
+    .foo-ul li > ul > li {
+        width: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+        max-width: none;
     }
     .footer img {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     .navbar-default{
         background: #08213f;
@@ -33,47 +57,46 @@
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom ">
     <div class="container">
-        <ul class="nav navbar-nav">
-            <li class="footer f-center">
-                <p class="fm-light fm-small fm-italic fm-space-low" >ADVERTISING</p>
-                <p class="fm-bold fm-high fm-space0 fm-space-high lightless" >RIUNITE</p>
-                <p class="fm-light fm-medium fm-italic fm-space-low">BEST WAY</p>
-            </li>
 
-        </ul>
-        <ul class="nav navbar-nav">
-            <li class="footer"><img src="../img/divisao.png"></li>
-        </ul>
-        <ul class="nav navbar-nav" style="max-width: 25%">
-            <li class="footer">
-                <p class="fm-regular fm-d-medium">ABOUT:</p>
-                <p class="fm-light fm-d-small fm-italic">RIUNITE É UM ESPUMANTE QUE TINHA RECEM-CHEGADO AO BRASIL E TINHA O DESAFIO DE DEMONTRAR QUE A MELHOR FORMA DE APRECIAR A BEBIDA SERIA GELADA. COM ISSO CRIEI A PROPAGANDA, TROCANDO A GARRAFA PELO CUBO DE GELO COMO SOLUÇÃO.</p>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li class="footer"><img src="../img/divisao.png"></li>
-        </ul>
-        <ul class="nav navbar-nav" >
-            <li class="footer">
-                <p class="fm-regular fm-d-medium ">AGENCY: </p><p class="fm-light fm-d-medium fm-italic ">AGEVOLE</p>
-            </li>
-            <li class="footer ">
-                <p class="fm-regular fm-d-medium ">CLIENT: </p><p class="fm-light fm-d-medium fm-italic ">SANTAR</p>
-            </li>
-            <li class="footer ">
-                <p class="fm-regular fm-d-medium ">ROLE: </p><p class="fm-light fm-d-medium fm-italic ">ART DIRECTOR</p>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li class="footer"><img src="../img/divisao.png"></li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li class="footer">
-                <p class="fm-regular fm-d-medium">SHARE:</p> </li>
-            <li><i class="fa fa-facebook"></i></li>
-            <li><i class="fa fa-twitter"></i></li>
-            <li><i class="fa fa-linkedin"></i></li>
-
-        </ul>
+        <div class="row">
+                <ul class="foo-ul ">
+                    <li class="f-center">
+                        <p class="fm-light fm-small fm-italic fm-space-low" >ADVERTISING</p>
+                        <p class="fm-bold fm-high fm-space0 fm-space-high lightless" >RIUNITE</p>
+                        <p class="fm-light fm-medium fm-italic fm-space-low">BEST WAY</p>
+                    </li>
+                    <li class="footer line"><img src="../img/divisao.png"></li>
+                    <li class="f-left">
+                        <p class="fm-regular fm-d-medium ">ABOUT:</p>
+                        <p class="fm-light fm-italic fm-d-small ">RIUNITE É UM ESPUMANTE QUE TINHA RECEM-CHEGADO AO BRASIL E TINHA O DESAFIO DE DEMONTRAR QUE A MELHOR FORMA DE APRECIAR A BEBIDA SERIA GELADA. COM ISSO CRIEI A PROPAGANDA, TROCANDO A GARRAFA PELO CUBO DE GELO COMO SOLUÇÃO.</p>
+                    </li>
+                    <li class="footer line"><img src="../img/divisao.png"></li>
+                    <li>
+                        <ul class="foo-ul">
+                            <li><p class="fm-regular fm-d-medium ">AGENCY: </p></li>
+                            <li><p class="fm-light fm-d-medium fm-italic "> AGEVOLE</p></li>
+                        </ul>
+                        <ul class="foo-ul">
+                            <li><p class="fm-regular fm-d-medium ">CLIENT: </p></li>
+                            <li><p class="fm-light fm-d-medium fm-italic "> SANTAR</p></li>
+                        </ul>
+                        <ul class="foo-ul">
+                            <li><p class="fm-regular fm-d-medium ">ROLE: </p></li>
+                            <li><p class="fm-light fm-d-medium fm-italic "> ART DIRECTOR</p></li>
+                        </ul>
+                    </li>
+                    <li class="footer line"><img src="../img/divisao.png"></li>
+                    <li class="f-left">
+                        <p class="fm-regular fm-d-medium">SHARE:</p>
+                        <ul class="foo-ul">
+                            <li><i class="fa fa-facebook fa-3x "></i></li>
+                            <li><i class="fa fa-twitter fa-3x"></i></li>
+                            <li><i class="fa fa-linkedin fa-3x"></i></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
     </div>
 </nav>
+</body>
+</html>
