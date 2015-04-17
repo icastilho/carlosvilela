@@ -1,0 +1,134 @@
+/* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
+html, body {overflow-x: hidden;}
+
+body {
+    /*font: 100% arial, verdana, tahoma, sans-serif;*/
+    color: #165195;
+    /*background-color: #08213f;*/
+    background: #08213f url('../img/fundo_intermediario.jpg');
+}
+
+header {
+    padding: 30px;
+    overflow: hidden;
+}
+
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 80%;
+    font-size: 1.5em;
+}
+h1 a {color: #FFF; text-decoration: none;}
+
+header input {
+    float: right;
+    padding: 10px;
+    width: 200px;
+    border: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main {
+    padding: 30px;
+}
+.main p {
+    font-size: .9em;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+
+menu {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    padding: 0;
+    background: #08213f;
+
+}
+menu li a {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    display: block;
+    color: #145eb3;
+}
+
+menu li a:hover {
+    background: #165195 ;
+    color:  #08213f;
+}
+menu img{
+    margin: 40% 0 40% 0;
+    width: 100%;
+    text-align: center;
+}
+
+menu li div {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    width: 50%;
+}
+
+/*
+    Aqui você esconde o menu para fora da tela
+    O valor é exatamente a largura da sidebar
+*/
+menu {
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    transform: translateX(-300px);
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+/*
+    Essa é a posição original do HEADER e do MAIN
+*/
+header, .main {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+/*
+   Com a classe menu-active na tag HTML
+*/
+.menu-active menu {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.menu-active header,
+.menu-active .main {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    transform: translateX(300px);
+}
+.logo {
+    padding-bottom: 13%;
+    text-align: center;
+}

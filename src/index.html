@@ -1,78 +1,111 @@
-<!doctype html>
-<html class="no-js" ng-app="carlosvilela">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html  class="no-js" ng-app="carlosvilela">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="This is a Carlos Vilela Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>Carlos Vilela Portfolio</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="css/slidemenumobile.css">
+    <link rel="stylesheet" href="css/diamonds.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
-        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" >
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/diamonds.css">
-        <link rel="stylesheet" href="css/slidemenu.css">
-        <link rel="stylesheet" href="css/fonts.css">
-
-    </head>
-    <body  ng-controller="MenuCtrl">
-        <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="site-wrap" >
-            <nav class="menu">
-                <ul class="menu">
-                    <li><img src="img/logo_canto.png"></li>
-                    <li><a href="#/portifolio">.PORTIFOLIO</a></li>
-                    <li><a href="#">.ABOUT</a></li>
-                    <li><a href="#">.CONTACT</a></li>
-                </ul>
-
-                <ul class="social">
-                    <li><i class="fa fa-facebook"></i></li>
-                    <li><i class="fa fa-twitter"></i></li>
-                    <li><i class="fa fa-instagram"></i></li>
-                    <li><i class="fa fa-behance"></i></li>
-                    <li><i class="fa fa-linkedin"></i></li>
-                    <li><i class="fa fa-pinterest"></i></li>
-                </ul>
-            </nav>
-
-            <div class="push-wrap">
-                <article>
-                   <a href="" class="toggle-nav" ng-click="slidemenu()"><i class="fa fa-bars"></i></a>
-                    <!-- Content Body -->
-
-                    <div ng-view="" ></div>
-                    <!-- Content Body -->
-                </article>
-            </div>
+<body ng-controller="MenuCtrl">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<menu>
+    <div>
+        <div>
+            <ul>
+                <li><div><img src="img/logo_canto.png"></div></li>
+                <li><a href="#/portifolio"><div>.PORTIFOLIO</div></a></li>
+                <li><a href="#"><div>.ABOUT</div></a></li>
+                <li><a href="#"><div>.CONTACT</div></a></li>
+            </ul>
         </div>
+    </div>
+</menu>
 
-        <nav class="navbar navbar-default  navbar-fixed-bottom">
-            ......
-        </nav>
+<header>
+    <a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a>
+</header>
 
-        <script type="text/javascript" src="bower_components/angularjs/angular.min.js"></script>
-        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript" src="js/vendor/jquery.diamonds.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/controllers.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+<section class="main">
+    <!-- Content Body -->
+    <div ng-view="" ></div>
+    <!-- Content Body -->
+</section>
+<!--<script type="text/javascript" src="bower_components/zepto/zepto.min.js"></script>-->
+<script type="text/javascript" src="bower_components/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/vendor/jquery.diamonds.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
 
-        </script>
-    </body>
+<script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+
+
+    $(document).ready(function(){
+        $('.toggle-nav').on('click touchstart', function(e){
+            $('html').toggleClass('menu-active');
+            e.preventDefault();
+        });
+    })
+
+
+    /*
+     * Normalized hide address bar for iOS & Android
+     * (c) Scott Jehl, scottjehl.com
+     * MIT License
+     */
+    /*  (function( win ){
+     var doc = win.document;
+
+     // If there's a hash, or addEventListener is undefined, stop here
+     if( !location.hash && win.addEventListener ){
+
+     //scroll to 1
+     window.scrollTo( 0, 1 );
+     var scrollTop = 1,
+     getScrollTop = function(){
+     return win.pageYOffset || doc.compatMode === "CSS1Compat" && doc.documentElement.scrollTop || doc.body.scrollTop || 0;
+     },
+
+     //reset to 0 on bodyready, if needed
+     bodycheck = setInterval(function(){
+     if( doc.body ){
+     clearInterval( bodycheck );
+     scrollTop = getScrollTop();
+     win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+     }
+     }, 15 );
+
+     win.addEventListener( "load", function(){
+     setTimeout(function(){
+     //at load, if user hasn't scrolled more than 20 or so...
+     if( getScrollTop() < 20 ){
+     //reset to hide addr bar at onload
+     win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+     }
+     }, 0);
+     } );
+     }
+     })( this );*/
+
+</script>
+</body>
 </html>
