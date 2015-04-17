@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="This is a Carlos Vilela Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>Carlos Vilela Portfolio</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
-  <meta charset="UTF-8">
-  <title></title>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="css/slidemenumobile.css">
 </head>
 <body>
-<nav class="navbar navbar-default  navbar-fixed-bottom">
-    ......
-</nav>
+
+<menu>
+    <div>
+        <div>
+    <ul>
+        <li><div><img src="img/logo_canto.png"></div></li>
+        <li><a href="#"><div>.PORTIFOLIO</div></a></li>
+        <li><a href="#"><div>.ABOUT</div></a></li>
+        <li><a href="#"><div>.CONTACT</div></a></li>
+    </ul>
+        </div>
+    </div>
+</menu>
+
+<header>
+    <a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a>
+</header>
+
+<section class="main">
+</section>
+<script type="text/javascript" src="bower_components/zepto/zepto.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.toggle-nav').on('click touchstart', function(e){
+            $('html').toggleClass('menu-active');
+            e.preventDefault();
+        });
+    })
+</script>
 </body>
 </html>
