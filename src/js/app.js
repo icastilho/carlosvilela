@@ -14,6 +14,12 @@ carlosvilelaApp.config(['$routeProvider',
                 templateUrl: 'views/detail.html',
                 controller: 'DetailCtrl'
             }).
+            when('/about', {
+                templateUrl: 'views/about.html'
+            }).
+            when('/contact', {
+                templateUrl: 'views/contact.html'
+            }).
             otherwise({
                 redirectTo: '/portifolio'
             });

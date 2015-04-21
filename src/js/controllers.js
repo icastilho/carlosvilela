@@ -11,6 +11,7 @@ controller.controller('MenuCtrl', function ($scope) {
 })
 .controller('PortifolioCtrl', function ($scope) {
     $scope.phones = "Home Carlos Vilela";
+
     $(".diamondswrap").diamonds({
         size : 440,
         gap : 1,
