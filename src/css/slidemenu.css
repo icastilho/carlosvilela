@@ -1,0 +1,151 @@
+/* IMPORTANT STUFF */
+nav {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -2px;
+}
+.site-wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.push-wrap {
+    -webkit-transition: all 300ms ease 0;
+    -moz-transition: all 300ms ease 0;" href="css/fonts.css">
+
+    -o-transition: all 300ms ease 0;
+    transition: all 300ms ease 0;
+
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.show-nav .push-wrap {
+    -webkit-transform: translate(300px, 0);
+    -moz-transform: translate(300px, 0);
+    -ms-transform: translate(300px, 0);
+    -o-transform: translate(300px, 0);
+    transform: translate(300px, 0);
+
+    -webkit-transform: translate3d(300px, 0, 0);
+    -moz-transform: translate3d(300px, 0, 0);
+    -ms-transform: translate3d(300px, 0, 0);
+    -o-transform: translate3d(300px, 0, 0);
+    transform: translate3d(300px, 0, 0);
+}
+
+
+
+/* BASE CSS */
+body {
+    background: #08213f;
+    color: #165195;
+}
+a {
+    transition: all 300ms ease;
+}
+
+.logo {
+    padding-top: 13%;
+    padding-bottom: 13%;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+nav.menu {
+    background: #08213f  ;
+    text-align: center;
+/*    -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.5);
+    box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.5);*/
+}
+
+nav.menu img{
+    margin: 30% 0 30% 0;
+    width: 50%;
+}
+
+nav.menu > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav.menu > ul > li > a {
+    display: block;
+    text-decoration: none !important;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    color: #145eb3;
+}
+nav.menu > ul > li > a:hover {
+    background: #165195 ;
+    color:  #08213f;
+}
+
+ul .social {
+    margin: 0;
+    padding: 0;
+}
+
+ul  li .social {
+    display: inline-block !important;
+    width: 100px;
+    min-height: 100px;
+
+}
+
+article {
+    position: relative;
+    min-height: 1500px;
+    background: #020d19 url('../img/fundo_intermediario.jpg');
+    z-index: 9;
+    width: 100%;
+}
+article h1 {
+    text-align: center;
+    margin: 40px 0 30px;
+}
+/*article p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}*/
+article .toggle-nav {
+    position: absolute;
+    font-size: 25px;
+    color: #165195;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    z-index: 10
+}
+article .toggle-nav:hover {
+    color: red;
+}
+i {
+    color: #165195;
+}
+.itemhover {
+    position: absolute;
+    width: 100%;
+    top: 37%;
+    opacity: 0;
+    color: #FFF;
+}

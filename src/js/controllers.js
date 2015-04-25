@@ -23,18 +23,14 @@ controller.controller('MenuCtrl', function ($scope) {
 
     $('.item').hover(
         function(){
-            $(this).find('img').animate({
-                opacity: 0.20
-            }, 300).promise();
+            $(this).find('img').addClass('dimond-box-img-hover');
 
-            $(this).parent().find('.itemhover').animate({
-                opacity: 1
-            }, 300);
+            $(this).parent().find('.itemhover').addClass('itemhoverdover');
 
         },
         function(){
-            $(this).find('img').stop().css('opacity', 1);
-            $(this).parent().find('.itemhover').stop().css('opacity', 0);
+            $(this).parent().find('.itemhover').removeClass('itemhoverdover');
+            $(this).find('img').removeClass('dimond-box-img-hover');
         });
 })
 .controller('DetailCtrl', function ($scope) {

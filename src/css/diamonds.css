@@ -82,4 +82,30 @@
 .diamond-box-inner img {
     max-width: 100%;
     height: auto;
+    opacity: 1;
+}
+
+.diamond-box-inner img.dimond-box-img-hover {
+    -webkit-transform:scale(1.5); /* prefixo para browsers webkit */
+    -moz-transform:scale(1.5); /* prefixo para browsers gecko */
+    -o-transform:scale(1.5); /* prefixo para opera */
+    transform:scale(1.5 );
+    opacity: 0.20;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+.item div.itemhover {
+    position: absolute;
+    width: 100%;
+    top: 37%;
+    opacity: 0;
+    color: #FFF;
+}
+
+.item div.itemhoverdover {
+    opacity: 1;
+    transition: all .25s linear;
 }
