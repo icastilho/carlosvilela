@@ -63,7 +63,7 @@ menu li a {
     color: #145eb3;
 }
 
-menu li a:hover {
+a:hover , header a:hover{
     /*background: #165195 ;*/
     /*color:  #08213f;*/
     color: #2d9bff;
@@ -71,6 +71,13 @@ menu li a:hover {
     text-decoration: none;
 }
 
+menu li a:focus{
+    color: #2d9bff;
+}
+
+header a:focus{
+    color: #145eb3;
+}
 
 menu img{
     margin: 40% 0 40% 0;
@@ -132,7 +139,7 @@ header, .main {
     transform: translateX(300px);
 }
 .logo {
-    padding-bottom: 13%;
+    padding-bottom: 8%;
     text-align: center;
 }
 
@@ -153,13 +160,4 @@ div.social ul li {
     padding-right: 5px;
 }
 
-div.social > ul > li > a {
-    color: #165195 ;
-    background-color: #08213f;
-}
-
-div.social > ul > li a:hover {
-    color: #2d9bff;
-    background-color: #08213f;
-}
 

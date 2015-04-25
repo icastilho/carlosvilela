@@ -130,7 +130,7 @@ gulp.task('lint:js', function () {
         'gulpfile.js',
         dirs.src + '/js/*.js',
         dirs.test + '/*.js'
-    ]).pipe(plugins.jscs())
+    ])//.pipe(plugins.jscs())
       .pipe(plugins.jshint())
       .pipe(plugins.jshint.reporter('jshint-stylish'))
       .pipe(plugins.jshint.reporter('fail'));

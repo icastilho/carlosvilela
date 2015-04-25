@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'montserratblack';
-    src: url('../../src/font/montserrat/Montserrat-Black.otf');
+    src: url('../font/montserrat/Montserrat-Black.otf');
 }
 
 @font-face {
     font-family: 'montserratbold';
-    src: url('../../src/font/montserrat/Montserrat-Bold.otf');
+    src: url('../font/montserrat/Montserrat-Bold.otf');
 }
 
 @font-face {
     font-family: 'montserrathairline';
-    src: url('../../src/font/montserrat/Montserrat-Hairline.otf');
+    src: url('../font/montserrat/Montserrat-Hairline.otf');
 }
 
 @font-face {
     font-family: 'montserratlight';
-    src: url('../../src/font/montserrat/Montserrat-Light.otf');
+    src: url('../font/montserrat/Montserrat-Light.otf');
 }
 
 @font-face {
     font-family: 'montserratregular';
-    src: url('../../src/font/montserrat/Montserrat-Regular.otf');
+    src: url('../font/montserrat/Montserrat-Regular.otf');
 }
 
 span.fm  {
@@ -70,3 +70,6 @@ p.lightless {
     margin-bottom: -6px;
 }
 
+p.p-with{
+    color: #FFFFFF;
+}
