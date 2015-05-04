@@ -63,11 +63,11 @@ p.fm-space-low {
     letter-spacing: 5px;
 }
 p.fm-space-high {
-    letter-spacing: 15px;
+    letter-spacing: 8px;
 }
 p.lightless {
-    margin-top: 4px;
-    margin-bottom: -6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 p.p-with{

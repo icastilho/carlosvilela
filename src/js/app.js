@@ -1,27 +1,32 @@
 var carlosvilelaApp = angular.module('carlosvilela', [
     'ngRoute',
-    'ngMap',
+    'ui.router',
     'carlosvilela.controller'
 ]);
 
-carlosvilelaApp.config(['$routeProvider',
-    function($routeProvider) {
-        $routeProvider.
-            when('/portifolio', {
+    carlosvilelaApp.config(['$stateProvider', '$urlRouterProvider', '$provide',
+    function($stateProvider, $urlRouterProvider, $provide) {
+            $urlRouterProvider.otherwise('/portifolio');
+
+            $stateProvider
+/*            .state('carlosvilela', {
+                url: "/carlosvilela",
+                abstract: true,
+                templateUrl: "index.html"
+            })*/
+            .state('about', {
+                url: '/about',
+                templateUrl: 'views/about.html',
+                controller: 'AboutCtrl'
+            })
+            .state('portifolio', {
+                url: '/portifolio',
                 templateUrl: 'views/portifolio.html',
                 controller: 'PortifolioCtrl'
-            }).
-            when('/detail', {
-                templateUrl: 'views/detail.html'
-            }).
-            when('/about', {
-                templateUrl: 'views/about.html'
-            }).
-            when('/contact', {
-                templateUrl: 'views/contact.html',
-                controller: 'ContactCtrl'
-            }).
-            otherwise({
-                redirectTo: '/portifolio'
+            })
+            .state('detail', {
+                url: '/portifolio/detail/:id',
+                templateUrl: 'views/detail.html',
+                controller: 'DetailCtrl'
             });
     }]);

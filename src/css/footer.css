@@ -1,0 +1,89 @@
+/* A footer css */
+.footer{
+    background-color: #08213f;
+    bottom: 0;
+    position: fixed;
+    width: 100.1%;
+    opacity: 0.9;
+}
+.f-container {
+    position: relative;
+}
+.f-container-center {
+    /*display: inline-block;*/
+    position: relative;
+    width: 100%;
+}
+.f-container-content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Preview */
+.f-preview {
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+}
+.f-left {
+    left: 0;
+    top: 0px;
+}
+.f-preview.f-left:hover #PrevImagem{
+    margin-left: 0px;
+}
+.f-right {
+    right: 0;
+    top: 0px;
+}
+.f-preview.f-right:hover #NextImagem{
+    margin-left: -220px;
+}
+.f-arrow {
+    background: #2768ae;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 8px;
+    z-index: 10;
+    display: table;
+}
+.f-arrow > div {
+    vertical-align: middle;
+    display: table-cell;
+}
+.f-arrow > div > img{
+    width: 6px;
+}
+.f-center{
+    text-align: center;
+    color: #FFF;
+}
+
+/* central content  */
+.f-left{
+    text-align: left;
+}
+.foo-ul li.line {
+    width: auto;
+}
+.foo-ul li > ul > li {
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: none;
+}
+.footer img {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.foo-left {
+    float: left;
+    position: relative;
+}
+.foo-right {
+    float: left;
+    position: relative;
+}

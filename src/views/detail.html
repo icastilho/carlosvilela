@@ -1,102 +1,56 @@
-<!doctype html>
-<html class="no-js" ng-app="carlosvilela">
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
-<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" >
-<link rel="stylesheet" href="../css/fonts.css">
-<link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" >
-<style>
-    .footer {
-        width: 100%;
-    }
-    .f-center{
-        text-align: center;
-    }
-    .f-left{
-        text-align: left;
-    }
-    ul.foo-ul{
-        margin: 0;
-        padding: 0;
-    }
-    .foo-ul li {
-        display: inline-block;
-        vertical-align: middle;
-        width: auto;
-        max-width: 25%;
-        color: #FFF;
-    }
-    .foo-ul li.line {
-        width: auto;
-    }
-
-    .foo-ul li > ul > li {
-        width: auto;
-        padding-left: 5px;
-        padding-right: 5px;
-        max-width: none;
-    }
-    .footer img {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    .navbar-default{
-        background: #08213f;
-        opacity: 0.90;
-    }
-</style>
-<div class="container-fluid">
-    <div class="row">
-        <div class="center-block">
-            <img class="img-responsive center-block" src="../img/portifolio/topo/topo_riunite.jpg">
+<div class="footer" >
+    <a  href="#/portifolio/detail/batavinho" >
+        <div class="f-preview f-left">
+            <div class="f-arrow "><div><img src="img/seta_esq.png"></div></div>
+            <div id="PrevImagem" style="background-image: url('img/portifolio/thumblr_{{id}}.png')">
+                <div id="TituloPrevProj">HOME</div>
+            </div>
+        </div>
+    </a>
+    <div class="f-container f-container-center">
+        <div class="f-container-content">
+            <div class="foo-left">
+                <div class="f-center">
+                    <p class="fm-light fm-small fm-italic fm-space-low" >{{item.type}}</p>
+                    <p class="fm-bold fm-high fm-space0 fm-space-high lightless" >{{item.name}}</p>
+                    <p class="fm-light fm-medium fm-italic fm-space-low">{{item.title}}</p>
+                </div>
+            </div>
+            <div id="LinhaSepProj"><img src="img/divisao.png"></div>
+            <div class="foo-right">
+                <div id="AboutProj">
+                    <div id="TitAbout">ABOUT</div>
+                    <div id="TxtAbout">
+                        {{item.about}}
+                    </div>
+                </div>
+            </div>
+            <div id="LinhaSepProj"><img src="img/divisao.png"></div>
+            <div class="foo-right">
+                <div id="FichaProj">
+                    AGENCY: <span class="dadoFicha">{{item.agency}}</span><br>
+                    CLIENT: <span class="dadoFicha">{{item.client}}</span><br>
+                    ROLE: <span class="dadoFicha">{{item.role}}</span><br>
+                    FARM EVA: <span class="dadoFicha">{{item.farmEva}}</span>
+                </div>
+            </div>
         </div>
     </div>
-
+    <a  href="#/portifolio/detail/riunite" >
+        <div class="f-preview f-right">
+            <div class="f-arrow"><div><img src="img/seta_dir.png"></div></div>
+            <div id="NextImagem" style="background-image: url('jobs/riunite-best-way/thumb.jpg')">
+                <div id="TituloNextProj">Riunite Best way</div>
+            </div>
+        </div>
+    </a>
 </div>
-<nav class="navbar navbar-default navbar-fixed-bottom ">
-    <div class="container">
-
-        <div class="row">
-                <ul class="foo-ul ">
-                    <li class="f-center">
-                        <p class="fm-light fm-small fm-italic fm-space-low" >ADVERTISING</p>
-                        <p class="fm-bold fm-high fm-space0 fm-space-high lightless" >RIUNITE</p>
-                        <p class="fm-light fm-medium fm-italic fm-space-low">BEST WAY</p>
-                    </li>
-                    <li class="footer line"><img src="../img/divisao.png"></li>
-                    <li class="f-left">
-                        <p class="fm-regular fm-d-medium ">ABOUT:</p>
-                        <p class="fm-light fm-italic fm-d-small ">RIUNITE É UM ESPUMANTE QUE TINHA RECEM-CHEGADO AO BRASIL E TINHA O DESAFIO DE DEMONTRAR QUE A MELHOR FORMA DE APRECIAR A BEBIDA SERIA GELADA. COM ISSO CRIEI A PROPAGANDA, TROCANDO A GARRAFA PELO CUBO DE GELO COMO SOLUÇÃO.</p>
-                    </li>
-                    <li class="footer line"><img src="../img/divisao.png"></li>
-                    <li>
-                        <ul class="foo-ul">
-                            <li><p class="fm-regular fm-d-medium ">AGENCY: </p></li>
-                            <li><p class="fm-light fm-d-medium fm-italic "> AGEVOLE</p></li>
-                        </ul>
-                        <ul class="foo-ul">
-                            <li><p class="fm-regular fm-d-medium ">CLIENT: </p></li>
-                            <li><p class="fm-light fm-d-medium fm-italic "> SANTAR</p></li>
-                        </ul>
-                        <ul class="foo-ul">
-                            <li><p class="fm-regular fm-d-medium ">ROLE: </p></li>
-                            <li><p class="fm-light fm-d-medium fm-italic "> ART DIRECTOR</p></li>
-                        </ul>
-                    </li>
-                    <li class="footer line"><img src="../img/divisao.png"></li>
-                    <li class="f-left">
-                        <p class="fm-regular fm-d-medium">SHARE:</p>
-                        <ul class="foo-ul">
-                            <li><i class="fa fa-facebook fa-3x "></i></li>
-                            <li><i class="fa fa-twitter fa-3x"></i></li>
-                            <li><i class="fa fa-linkedin fa-3x"></i></li>
-                        </ul>
-                    </li>
-                </ul>
-        </div>
-    </div>
-</nav>
-</body>
-</html>
+<div class="cover">
+    <img ng-src="img/portifolio/{{id}}/cover.jpg">
+</div>
+<div class="dust-cover">
+    <img ng-src="img/portifolio/{{id}}/dust-cover.jpg">
+</div>
+<!--
+<div class="slide-animate" ng-include="item.url"></div>
+-->

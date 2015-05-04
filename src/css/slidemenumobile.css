@@ -9,6 +9,8 @@ body {
 header {
     padding: 30px;
     overflow: hidden;
+    position: fixed;
+    z-index: 100;
 }
 
 header h1 {
@@ -39,7 +41,7 @@ ul {
 .main p {
     font-size: .9em;
     line-height: 1.2em;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 
@@ -49,7 +51,7 @@ menu {
     top: 0;
     left: 0;
     z-index: 1;
-    width: 300px;
+    width: 200px;
     height: 100%;
     padding: 0;
     background: #08213f;
@@ -63,11 +65,14 @@ menu li a {
     color: #145eb3;
 }
 
+menu li a:hover {
+    background: #165195 ;
+    color:  #08213f;
+}
+
 a:hover , header a:hover{
-    /*background: #165195 ;*/
-    /*color:  #08213f;*/
     color: #2d9bff;
-    background-color: #08213f;
+    /*background-color: #08213f;*/
     text-decoration: none;
 }
 
@@ -97,10 +102,10 @@ menu li div {
     O valor é exatamente a largura da sidebar
 */
 menu {
-    -webkit-transform: translateX(-300px);
-    -moz-transform: translateX(-300px);
-    -ms-transform: translateX(-300px);
-    transform: translateX(-300px);
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    transform: translateX(-200px);
     -webkit-transition: all .25s linear;
     -moz-transition: all .25s linear;
     -ms-transition: all .25s linear;
@@ -133,10 +138,10 @@ header, .main {
 
 .menu-active header,
 .menu-active .main {
-    -webkit-transform: translateX(300px);
-    -moz-transform: translateX(300px);
-    -ms-transform: translateX(300px);
-    transform: translateX(300px);
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
 }
 .logo {
     padding-bottom: 8%;

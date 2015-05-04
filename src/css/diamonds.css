@@ -86,10 +86,10 @@
 }
 
 .diamond-box-inner img.dimond-box-img-hover {
-    -webkit-transform:scale(1.5); /* prefixo para browsers webkit */
-    -moz-transform:scale(1.5); /* prefixo para browsers gecko */
-    -o-transform:scale(1.5); /* prefixo para opera */
-    transform:scale(1.5 );
+    -webkit-transform:scale(1.2); /* prefixo para browsers webkit */
+    -moz-transform:scale(1.2); /* prefixo para browsers gecko */
+    -o-transform:scale(1.2); /* prefixo para opera */
+    transform:scale(1.2);
     opacity: 0.20;
     -webkit-transition: all .25s linear;
     -moz-transition: all .25s linear;
