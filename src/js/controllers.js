@@ -42,8 +42,24 @@ controller
 
         $scope.item  = portifolios[$stateParams.id];
         $scope.id = $stateParams.id;
-        console.log(Object.keys(portifolios));
+        var keys = Object.keys(portifolios);
 
+        var key = keys.indexOf($stateParams.id);
+
+        if(key == 0){
+            $scope.prev = keys[keys.length-1];
+        }else{
+            $scope.prev = keys[key -1];
+        }
+
+        if(key == keys.length-1){
+            $scope.next =keys[0];
+        }else{
+            $scope.next = keys[key + 1];
+        }
+console.log(key == 0);
+        console.log( $scope.prev);
+        console.log( $scope.next);
 
     });
 
