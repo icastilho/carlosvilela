@@ -40,6 +40,7 @@ controller
     })
     .controller('DetailCtrl', function ($scope, $stateParams) {
 
+
         $scope.item  = portifolios[$stateParams.id];
         $scope.id = $stateParams.id;
         var keys = Object.keys(portifolios);
@@ -57,10 +58,25 @@ controller
         }else{
             $scope.next = keys[key + 1];
         }
-console.log(key == 0);
-        console.log( $scope.prev);
-        console.log( $scope.next);
 
+
+        angular.element(document).ready(function () {
+            console.log('Hello World');
+
+            var $container = $('#container_mosaico');
+
+            console.log($container);
+            $container.packery({
+                itemSelector: '.item',
+                gutter: 20
+            });
+            console.log('after');
+        });
+
+        $scope.loadmosaico = function() {
+            console.log('mosaico');
+            //$('#container_mosaico').packery({"gutter": ".gutter-sizer", "itemSelector": ".item"});
+        }
     });
 
 
@@ -85,7 +101,7 @@ var portifolios = {
         about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
         agency: 'AGEVOLE',
         client: 'SANTAR',
-        role: 'ART DIRECTION',
+        role: 'ART DIRECTION'
 
 
     },

@@ -2,32 +2,12 @@
 html, body {overflow-x: hidden;}
 
 body {
-    color: #165195;
+    color: #FFF;
     background: #08213f url('../img/fundo_intermediario.jpg');
 }
 
-header {
-    padding: 30px;
-    overflow: hidden;
-    position: fixed;
-    z-index: 100;
-}
 
-header h1 {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    width: 80%;
-    font-size: 1.5em;
-}
 h1 a {color: #FFF; text-decoration: none;}
-
-header input {
-    float: right;
-    padding: 10px;
-    width: 200px;
-    border: none;
-}
 
 ul {
     margin: 0;
@@ -36,7 +16,8 @@ ul {
 }
 
 .main {
-    padding: 30px;
+    margin-left: 60px;
+
 }
 .main p {
     font-size: .9em;
@@ -45,16 +26,67 @@ ul {
 }
 
 
-menu {
+.faixa {
     margin: 0;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-    width: 200px;
+    z-index: 100;
+    width: 60px;
     height: 100%;
     padding: 0;
     background: #08213f;
+
+}
+.faixa ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.faixa li {
+    margin-left: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faixa li a {
+    color: #FFF;
+}
+
+.faixa li a:hover {
+    background: #165195 ;
+    color:  #FFF;
+}
+
+
+.faixa li a:focus{
+    color: #2d9bff;
+}
+
+.faixa img{
+    vertical-align: middle;
+}
+.faixa-top {
+    position: absolute;
+    top: 0;
+}
+.faixa-middle {
+    position: absolute;
+    top: 25%;
+}
+menu {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 60px;
+    z-index: 1;
+    width: 150px;
+    height: 100%;
+    padding: 0;
+    opacity: 0.6;
+    background: #3f5394;
 
 }
 menu li a {
@@ -62,17 +94,16 @@ menu li a {
     line-height: 60px;
     font-size: 18px;
     display: block;
-    color: #145eb3;
+    color: #FFF;
 }
 
 menu li a:hover {
     background: #165195 ;
-    color:  #08213f;
+    color:  #FFF;
 }
 
 a:hover , header a:hover{
-    color: #2d9bff;
-    /*background-color: #08213f;*/
+    color: #FFF;
     text-decoration: none;
 }
 
@@ -81,7 +112,7 @@ menu li a:focus{
 }
 
 header a:focus{
-    color: #145eb3;
+    color: #FFF;
 }
 
 menu img{
@@ -102,10 +133,10 @@ menu li div {
     O valor é exatamente a largura da sidebar
 */
 menu {
-    -webkit-transform: translateX(-200px);
-    -moz-transform: translateX(-200px);
-    -ms-transform: translateX(-200px);
-    transform: translateX(-200px);
+    -webkit-transform: translateX(-150px);
+    -moz-transform: translateX(-150px);
+    -ms-transform: translateX(-150px);
+    transform: translateX(-150px);
     -webkit-transition: all .25s linear;
     -moz-transition: all .25s linear;
     -ms-transition: all .25s linear;
@@ -116,10 +147,10 @@ menu {
     Essa é a posição original do HEADER e do MAIN
 */
 header, .main {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(60);
+    -moz-transform: translateX(60);
+    -ms-transform: translateX(60);
+    transform: translateX(60);
     -webkit-transition: all .25s linear;
     -moz-transition: all .25s linear;
     -ms-transition: all .25s linear;
@@ -138,10 +169,10 @@ header, .main {
 
 .menu-active header,
 .menu-active .main {
-    -webkit-transform: translateX(200px);
-    -moz-transform: translateX(200px);
-    -ms-transform: translateX(200px);
-    transform: translateX(200px);
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    transform: translateX(150px);
 }
 .logo {
     padding-bottom: 8%;

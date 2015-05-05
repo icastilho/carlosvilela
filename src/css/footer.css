@@ -3,8 +3,9 @@
     background-color: #08213f;
     bottom: 0;
     position: fixed;
-    width: 100.1%;
+    width: 97%;
     opacity: 0.9;
+    z-index: 1000;
 }
 .f-container {
     position: relative;
@@ -15,7 +16,7 @@
     width: 100%;
 }
 .f-container-content {
-    width: 50%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
@@ -40,7 +41,7 @@
     top: 0px;
 }
 .f-preview.f-right:hover #NextImagem{
-    margin-left: -220px;
+    margin-left: -150px;
 }
 .f-arrow {
     background: #2768ae;

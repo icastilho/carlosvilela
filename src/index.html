@@ -22,16 +22,16 @@
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+
 <menu>
-    <div style="height: 100%">
-        <div>
-            <ul>
-                <li><div><img src="img/logo_canto.png"></div></li>
-                <li><a href="#/portifolio"><div >.PORTIFOLIO</div></a></li>
-                <li><a href="#/about"><div >.ABOUT</div></a></li>
-            </ul>
-        </div>
-        <div class="social">
+    <ul class="faixa-top">
+        <li></li>
+        <li ><a href="" class="toggle-nav">MENU</a></li>
+    </ul>
+    <ul class="faixa-middle">
+        <li><a href="#/portifolio">PORTIFOLIO</a></li>
+        <li><a href="#/about">ABOUT</a></li>
+        <li><div class="social">
             <ul >
                 <li><a href="http://br.linkedin.com/in/cvilela" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://www.facebook.com/vileladesigner" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -39,24 +39,33 @@
                 <li><a href="https://www.behance.net/cvilela"  target="_blank"><i class="fa fa-behance"></i></a> </li>
                 <li><a href="https://www.pinterest.com/carlosvilela"  target="_blank"><i class="fa fa-pinterest"></i></a> </li>
             </ul>
-        </div>
-    </div>
+        </div></li>
+    </ul>
 </menu>
-
-<header ng-controller="MenuCtrl">
-        <a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a>
-</header>
-
+<div class="faixa">
+    <ul class="faixa-top">
+        <li><img src="img/logo_faixa.png"></li>
+        <li ng-controller="MenuCtrl"><a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a></li>
+    </ul>
+    <ul class="faixa-middle">
+        <li><a href="#/portifolio"><img src="img/port.png"></a></li>
+        <li><a href="#/about"><img src="img/about.png"></a></a></li>
+        <li><a href="#/about"><img src="img/social.png"></a></a></li>
+    </ul>
+</div>
+<section class="main">
 <!-- Content Body -->
     <div ui-view ></div>
 <!-- Content Body -->
-
+</section>
 <!--<script type="text/javascript" src="bower_components/zepto/zepto.min.js"></script>-->
 <script type="text/javascript" src="bower_components/angularjs/angular.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="bower_components/packery/dist/packery.pkgd.min.js"></script>
 <script type="text/javascript" src="js/vendor/jquery.diamonds.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controllers.js"></script>

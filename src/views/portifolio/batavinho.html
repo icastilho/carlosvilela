@@ -1,6 +1,61 @@
-<div class="portifolio-content">
-    <span class="ft-100"><img src="img/portifolio/batavinho/foto00.jpg"></span>
-        <span class="ft-70"><img src="img/portifolio/batavinho/foto01.jpg"></span>
-        <span class="ft-30"><img src="img/portifolio/batavinho/foto02.jpg"></span>
-    <span class="ft-30"><img src="img/portifolio/batavinho/foto03.jpg"></span>
+<style>
+    .gutter-sizer{width: 20px;}
+    .item_1_1{width: 25%;}
+    .item_1_2{width: 25%;}
+
+    .item_2_1{width: 50%;}
+    .item_2_2{width: 50%;}
+    .item_2_3{width: 50%;}
+    .item_2_4{width: 50%;}
+
+    .item_3_1{width: 75%;}
+    .item_3_2{width: 75%;}
+    .item_3_3{width: 75%;}
+    .item_3_4{width: 75%;}
+
+    .item_4_1{width: 100%;}
+    .item_4_2{width: 100%;}
+    .item_4_3{width: 100%;}
+    .item_4_4{width: 100%;}
+</style>
+
+<div id="container_mosaico" >
+    <div class="item item_4_2">
+        <img src="img/portifolio/batavinho/bloc1.jpg">
+    </div>
+    <div class="item item_3_3">
+        <img src="img/portifolio/batavinho/bloc2.jpg">
+    </div>
+    <div class="item item_1_2">
+        <img src="img/portifolio/batavinho/bloc3.jpg">
+    </div>
+    <div class="item item_1_1">
+        <img src="img/portifolio/batavinho/bloc4.jpg">
+    </div>
+    <div class="item item_1_2">
+        <img src="img/portifolio/batavinho/bloc5.jpg">
+    </div>
+    <div class="item item_1_2">
+        <img src="img/portifolio/batavinho/bloc6.jpg">
+    </div>
+    <div class="item item_2_2">
+        <img src="img/portifolio/batavinho/bloc7.jpg">
+    </div>
 </div>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="bower_components/packery/dist/packery.pkgd.min.js"></script>
+<script>
+
+    $( document ).ready(function() {
+        var $container = $('#container_mosaico');
+        console.log($container);
+        $container.packery({
+            itemSelector: '.item',
+            gutter: 20
+        });
+//        $('#container_mosaico').packery({"gutter": ".gutter-sizer", "itemSelector": ".item"});
+    });
+
+</script>

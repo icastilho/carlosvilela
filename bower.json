@@ -22,5 +22,8 @@
     "src/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "packery": "~1.4.1"
+  }
 }
