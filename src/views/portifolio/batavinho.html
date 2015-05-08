@@ -1,25 +1,60 @@
 <style>
-    .gutter-sizer{width: 20px;}
-    .item_1_1{width: 25%;}
-    .item_1_2{width: 25%;}
+.gutter-sizer{width: 2%}
+.grid-sizer{width: 23.5%;}
+.grid-sizerheight{}
+.item_1_1{width: 23.5%;}
+.item_1_2{width: 23.5%;}
 
-    .item_2_1{width: 50%;}
-    .item_2_2{width: 50%;}
-    .item_2_3{width: 50%;}
-    .item_2_4{width: 50%;}
+.item_2_1{width: 49%;}
+.item_2_2{width: 49%;}
+.item_2_3{width: 49%;}
+.item_2_4{width: 49%;}
 
-    .item_3_1{width: 75%;}
-    .item_3_2{width: 75%;}
-    .item_3_3{width: 75%;}
-    .item_3_4{width: 75%;}
+.item_3_1{width: 74.5%;}
+.item_3_2{width: 74.5%;}
+.item_3_3{width: 74.5%;}
+.item_3_4{width: 74.5%;}
 
-    .item_4_1{width: 100%;}
-    .item_4_2{width: 100%;}
-    .item_4_3{width: 100%;}
-    .item_4_4{width: 100%;}
+.item_4_1{width: 100%;}
+.item_4_2{width: 100%;}
+.item_4_3{width: 100%;}
+.item_4_4{width: 100%;}
+
+.item img{ width: 100%;}
+.item{
+    box-sizing: content-box !important;
+}
+
+#container_mosaico{
+    background: none repeat scroll 0 0 #040c19;
+    position: relative;
+    width: 100%;
+     margin-bottom: 184px;
+    box-sizing: content-box !important;
+}
+
+@media screen and (max-width: 480px){
+    .grid-sizer{width: 100%;}
+    .grid-sizerheight{}
+    .item_1_1{width: 100%;}
+    .item_1_2{width: 100%;}
+
+    .item_2_1{width: 100%;}
+    .item_2_2{width: 100%;}
+    .item_2_3{width: 100%;}
+    .item_2_4{width: 100%;}
+
+    .item_3_1{width: 100%;}
+    .item_3_2{width: 100%;}
+    .item_3_3{width: 100%;}
+    .item_3_4{width: 100%;}
+}
 </style>
 
 <div id="container_mosaico" >
+    <div class="gutter-sizer"></div>
+    <div class="grid-sizer"></div>
+    <div class="grid-sizerheight"></div>
     <div class="item item_4_2">
         <img src="img/portifolio/batavinho/bloc1.jpg">
     </div>
@@ -42,20 +77,3 @@
         <img src="img/portifolio/batavinho/bloc7.jpg">
     </div>
 </div>
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script type="text/javascript" src="bower_components/packery/dist/packery.pkgd.min.js"></script>
-<script>
-
-    $( document ).ready(function() {
-        var $container = $('#container_mosaico');
-        console.log($container);
-        $container.packery({
-            itemSelector: '.item',
-            gutter: 20
-        });
-//        $('#container_mosaico').packery({"gutter": ".gutter-sizer", "itemSelector": ".item"});
-    });
-
-</script>

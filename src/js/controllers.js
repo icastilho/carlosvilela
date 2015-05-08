@@ -61,15 +61,20 @@ controller
 
 
         angular.element(document).ready(function () {
-            console.log('Hello World');
-
-            var $container = $('#container_mosaico');
-
+            alert('Hello World');
             console.log($container);
-            $container.packery({
+            var $container = $('#container_mosaico').imagesLoaded( function(){
+
+              $container.packery({ 
                 itemSelector: '.item',
-                gutter: 20
+                gutter: '.gutter-sizer',
+                columnWidth: '.grid-sizer',
+                rowHeight: '.grid-sizerheight',
+                percentPosition: true
+              });
             });
+
+
             console.log('after');
         });
 
