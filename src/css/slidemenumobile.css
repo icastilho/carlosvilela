@@ -4,9 +4,10 @@ html, body {overflow-x: hidden;}
 body {
     color: #FFF;
     background: #08213f url('../img/fundo_intermediario.jpg');
+    margin-left: 60px;
 }
 
-
+a:active, a:focus {color: #FFF; text-decoration: none;}
 h1 a {color: #FFF; text-decoration: none;}
 
 ul {
@@ -16,34 +17,33 @@ ul {
 }
 
 .main {
-    margin-left: 60px;
+
 
 }
 .main p {
     font-size: .9em;
     line-height: 1.2em;
-    /*margin-bottom: 20px;*/
 }
-
 
 .faixa {
     margin: 0;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 10000;
     width: 60px;
     height: 100%;
     padding: 0;
     background: #08213f;
-
 }
+
 .faixa ul {
     width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 .faixa li {
     margin-left: 2px;
     margin-top: 30px;
@@ -56,13 +56,11 @@ ul {
 }
 
 .faixa li a:hover {
-    background: #165195 ;
-    color:  #FFF;
+    color:  #2d9bff;
 }
 
-
 .faixa li a:focus{
-    color: #2d9bff;
+
 }
 
 .faixa img{
@@ -78,28 +76,40 @@ ul {
 }
 menu {
     margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
     position: fixed;
     top: 0;
     left: 60px;
     z-index: 1;
-    width: 150px;
+    width: 170px;
     height: 100%;
-    padding: 0;
     opacity: 0.6;
     background: #3f5394;
+}
+menu > ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
 }
+menu > ul > li {
+    margin-left: 2px;
+    text-align: left;
+    vertical-align: middle;
+    height: 37px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 menu li a {
-    height: 60px;
-    line-height: 60px;
     font-size: 18px;
     display: block;
     color: #FFF;
 }
-
 menu li a:hover {
-    background: #165195 ;
-    color:  #FFF;
+    color:  #2d9bff;
+    text-decoration: none;
 }
 
 a:hover , header a:hover{
@@ -115,28 +125,16 @@ header a:focus{
     color: #FFF;
 }
 
-menu img{
-    margin: 40% 0 40% 0;
-    width: 100%;
-    text-align: center;
-}
-
-menu li div {
-    margin-left: auto;
-    margin-right: auto;
-    display: table;
-    width: 50%;
-}
 
 /*
     Aqui você esconde o menu para fora da tela
     O valor é exatamente a largura da sidebar
 */
 menu {
-    -webkit-transform: translateX(-150px);
-    -moz-transform: translateX(-150px);
-    -ms-transform: translateX(-150px);
-    transform: translateX(-150px);
+    -webkit-transform: translateX(-170px);
+    -moz-transform: translateX(-170px);
+    -ms-transform: translateX(-170px);
+    transform: translateX(-170px);
     -webkit-transition: all .25s linear;
     -moz-transition: all .25s linear;
     -ms-transition: all .25s linear;
@@ -169,31 +167,21 @@ header, .main {
 
 .menu-active header,
 .menu-active .main {
-    -webkit-transform: translateX(150px);
-    -moz-transform: translateX(150px);
-    -ms-transform: translateX(150px);
-    transform: translateX(150px);
+    -webkit-transform: translateX(170px);
+    -moz-transform: translateX(170px);
+    -ms-transform: translateX(170px);
+    transform: translateX(170px);
 }
 .logo {
     padding-bottom: 8%;
     text-align: center;
 }
 
-div.social {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-div.social ul {
-    text-align: center;
-    width: 100%;
-
-}
 
 div.social ul li {
     display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 

@@ -1,15 +1,15 @@
 
 
 <div class="footer" >
-    <a  href="#/portifolio/detail/{{prev}}" >
+    <a  href="#/portfolio/detail/{{prevkey}}" >
         <div class="f-preview f-left">
             <div class="f-arrow "><div><img src="img/seta_esq.png"></div></div>
-            <div id="PrevImagem" style="background-image: url('img/portifolio/thumblr_{{prev}}.jpg')">
-                <div id="TituloPrevProj">HOME</div>
+            <div id="PrevImagem" style="background-image: url('img/portfolio/thumblr_{{prevkey}}.jpg')">
+                <div id="TituloPrevProj">{{prev.name}} {{prev.title}}</div>
             </div>
         </div>
     </a>
-    <div class="f-container f-container-center">
+    <div class="f-container-center">
         <div class="f-container-content">
             <div class="foo-left">
                 <div class="f-center">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div id="LinhaSepProj"><img src="img/divisao.png"></div>
-            <div class="foo-right">
+            <div class="foo-center">
                 <div id="AboutProj">
                     <div id="TitAbout">ABOUT</div>
                     <div id="TxtAbout">
@@ -38,19 +38,21 @@
             </div>
         </div>
     </div>
-    <a  href="#/portifolio/detail/{{next}}" >
+    <a  href="#/portfolio/detail/{{nextkey}}" >
         <div class="f-preview f-right">
             <div class="f-arrow"><div><img src="img/seta_dir.png"></div></div>
-            <div id="NextImagem" style="background-image: url('img/portifolio/thumblr_{{next}}.jpg')">
-                <div id="TituloNextProj">Riunite Best way</div>
+            <div id="NextImagem" style="background-image: url('img/portfolio/thumblr_{{nextkey}}.jpg')">
+                <div id="TituloNextProj">{{next.name}} {{next.title}}</div>
             </div>
         </div>
     </a>
 </div>
 <div class="cover">
-    <img ng-src="img/portifolio/{{id}}/cover.jpg">
+    <img ng-src="img/portfolio/{{id}}/cover.jpg">
 </div>
 <div class="dust-cover">
-    <img ng-src="img/portifolio/{{id}}/dust-cover.jpg">
+    <img ng-src="img/portfolio/{{id}}/dust-cover.jpg">
 </div>
+
 <div class="slide-animate" ng-include="item.url"></div>
+

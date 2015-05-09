@@ -3,7 +3,6 @@
  */
 var controller = angular.module('carlosvilela.controller', []);
 
-
 controller
     .controller('CarlosvilelaCtrl', function () {
 
@@ -11,12 +10,11 @@ controller
     .controller('MenuCtrl', function () {
 
         $('.toggle-nav').on('click touchstart', function(e){
-            console.log('acao menu');
             $('html').toggleClass('menu-active');
             e.preventDefault();
         });
     })
-    .controller('PortifolioCtrl', function ($scope) {
+    .controller('PortfolioCtrl', function ($scope) {
 
         $(".diamondswrap").diamonds({
             size : 440,
@@ -26,9 +24,7 @@ controller
             itemSelector : ".item"
         });
 
-
         $('.item').hover(
-
             function(){
                 $(this).find('img').addClass('dimond-box-img-hover');
                 $(this).parent().find('.itemhover').addClass('itemhoverdover');
@@ -40,32 +36,34 @@ controller
     })
     .controller('DetailCtrl', function ($scope, $stateParams) {
 
-
         $scope.item  = portifolios[$stateParams.id];
         $scope.id = $stateParams.id;
         var keys = Object.keys(portifolios);
 
         var key = keys.indexOf($stateParams.id);
 
-        if(key == 0){
-            $scope.prev = keys[keys.length-1];
+        if(key === 0){
+            $scope.prevkey = keys[keys.length-1];
+            $scope.prev = portifolios[$scope.prevkey];
         }else{
-            $scope.prev = keys[key -1];
+            $scope.prevkey = keys[key -1];
+            $scope.prev = portifolios[$scope.prevkey];
         }
 
         if(key == keys.length-1){
-            $scope.next =keys[0];
+            $scope.nextkey = keys[0];
+            $scope.next = portifolios[ $scope.nextkey];
         }else{
-            $scope.next = keys[key + 1];
+            $scope.nextkey = keys[key + 1];
+            $scope.next = portifolios[$scope.nextkey];
         }
 
 
-        angular.element(document).ready(function () {
-            alert('Hello World');
-            console.log($container);
+        $scope.packeryInit = function () {
+            console.log('packeryInit');
             var $container = $('#container_mosaico').imagesLoaded( function(){
 
-              $container.packery({ 
+              $container.packery({
                 itemSelector: '.item',
                 gutter: '.gutter-sizer',
                 columnWidth: '.grid-sizer',
@@ -73,15 +71,8 @@ controller
                 percentPosition: true
               });
             });
+        };
 
-
-            console.log('after');
-        });
-
-        $scope.loadmosaico = function() {
-            console.log('mosaico');
-            //$('#container_mosaico').packery({"gutter": ".gutter-sizer", "itemSelector": ".item"});
-        }
     });
 
 

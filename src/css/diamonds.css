@@ -83,6 +83,10 @@
     max-width: 100%;
     height: auto;
     opacity: 1;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
 }
 
 .diamond-box-inner img.dimond-box-img-hover {

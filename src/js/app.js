@@ -6,7 +6,7 @@ var carlosvilelaApp = angular.module('carlosvilela', [
 
     carlosvilelaApp.config(['$stateProvider', '$urlRouterProvider', '$provide',
     function($stateProvider, $urlRouterProvider, $provide) {
-            $urlRouterProvider.otherwise('/portifolio');
+            $urlRouterProvider.otherwise('/portfolio');
 
             $stateProvider
 /*            .state('carlosvilela', {
@@ -19,13 +19,13 @@ var carlosvilelaApp = angular.module('carlosvilela', [
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl'
             })
-            .state('portifolio', {
-                url: '/portifolio',
-                templateUrl: 'views/portifolio.html',
-                controller: 'PortifolioCtrl'
+            .state('portfolio', {
+                url: '/portfolio',
+                templateUrl: 'views/portfolio.html',
+                controller: 'PortfolioCtrl'
             })
             .state('detail', {
-                url: '/portifolio/detail/:id',
+                url: '/portfolio/detail/:id',
                 templateUrl: 'views/detail.html',
                 controller: 'DetailCtrl'
             });
