@@ -1,12 +1,6 @@
 # [Carlos Vilela Site](http://carlosvilela.com.br)
 
-
-HTML5 Boilerplate is a professional front-end template for building fast,
-robust, and adaptable web apps or sites.
-
-This project is the product of many years of iterative development and combined
-community knowledge. It does not impose a specific development philosophy or
-framework, so you're free to architect your code in the way that you want.
+A Portfolio Site of Carlos Vilela Design
 
 * Source: [https://github.com/icastilho/carlosvilela](https://github.com/icastilho/carlosvilela)
 * Homepage: [http://carlosvilela.com.br preview](http://carlosvilela.com.br/new/carlosvilela/src)
