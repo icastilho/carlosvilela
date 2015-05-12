@@ -1,21 +1,3 @@
-/* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
-html, body {overflow-x: hidden;}
-
-body {
-    color: #FFF;
-    background: #08213f url('../img/fundo_intermediario.jpg');
-    margin-left: 60px;
-}
-
-a:active, a:focus {color: #FFF; text-decoration: none;}
-h1 a {color: #FFF; text-decoration: none;}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
 .main {
 
 
@@ -55,8 +37,8 @@ ul {
     color: #FFF;
 }
 
-.faixa li a:hover {
-    color:  #2d9bff;
+.faixa li a div:hover {
+    background-color:  #2d9bff;
 }
 
 .faixa li a:focus{
@@ -76,8 +58,7 @@ ul {
 }
 menu {
     margin: 0;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0;
     position: fixed;
     top: 0;
     left: 60px;
@@ -174,6 +155,7 @@ header, .main {
 }
 .logo {
     padding-bottom: 8%;
+    padding-top: 8%;
     text-align: center;
 }
 

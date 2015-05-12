@@ -1,5 +1,19 @@
+/* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
+html {overflow-x: hidden;}
 
-map {
-    height: 400px;
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #FFF;
+    background: #08213f url('../img/fundo_intermediario.jpg');
+    margin-left: 60px;
+}
 
+a, a:active, a:focus {color: #FFF; text-decoration: none;}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

@@ -58,7 +58,12 @@ controller
             $scope.next = portifolios[$scope.nextkey];
         }
 
-
+        $scope.getDetailUrl = function(id){
+            console.log(id);
+            var url = 'views/portfolio/'+id+'.html';
+            console.log(url);
+            return url;
+        }
         $scope.packeryInit = function () {
             console.log('packeryInit');
             var $container = $('#container_mosaico').imagesLoaded( function(){
@@ -85,8 +90,7 @@ var portifolios = {
         agency: 'AGEVOLE',
         client: 'BATAVO',
         role: 'ART DIRECTION',
-        farmEva: 'MINGONE / LG MARKETING',
-        url: 'views/portifolio/batavinho.html'
+        farmEva: 'MINGONE / LG MARKETING'
     },
 
 
