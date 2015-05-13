@@ -1,0 +1,84 @@
+<style>
+.gutter-sizer{width: 2%}
+.grid-sizer{width: 23.5%;}
+.grid-sizerheight{}
+.item_1_1{width: 23.5%;}
+.item_1_2{width: 23.5%;}
+.item_1_3{width: 23.5%;}
+.item_1_4{width: 23.5%;}
+
+.item_2_1{width: 49%;}
+.item_2_2{width: 49%;}
+.item_2_3{width: 49%;}
+.item_2_4{width: 49%;}
+
+.item_3_1{width: 74.5%;}
+.item_3_2{width: 74.5%;}
+.item_3_3{width: 74.5%;}
+.item_3_4{width: 74.5%;}
+
+.item_4_1{width: 100%;}
+.item_4_2{width: 100%;}
+.item_4_3{width: 100%;}
+.item_4_4{width: 100%;}
+
+.item img{ width: 100%;}
+.item{
+    box-sizing: content-box !important;
+}
+
+#container_mosaico{
+    background: none repeat scroll 0 0 #040c19;
+    box-sizing: content-box !important;
+    position: relative;
+    width: 100%;
+}
+
+#MosaicoProjetos{
+    background: none repeat scroll 0 0 #040c19;
+    padding: 20px 20px 183px;
+}
+
+@media screen and (max-width: 480px){
+    .grid-sizer{width: 100%;}
+    .grid-sizerheight{}
+    .item_1_1{width: 100%;}
+    .item_1_2{width: 100%;}
+
+    .item_2_1{width: 100%;}
+    .item_2_2{width: 100%;}
+    .item_2_3{width: 100%;}
+    .item_2_4{width: 100%;}
+
+    .item_3_1{width: 100%;}
+    .item_3_2{width: 100%;}
+    .item_3_3{width: 100%;}
+    .item_3_4{width: 100%;}
+}
+</style>
+
+<div id="MosaicoProjetos">
+    <div id="container_mosaico" ng-init="packeryInit()">
+        <div class="gutter-sizer"></div>
+        <div class="grid-sizer"></div>
+        <div class="grid-sizerheight"></div>
+        <div class="item item_3_3">
+            <img src="img/portfolio/frido/imagens/foto00.jpg">
+        </div>
+        <div class="item item_1_1">
+            <img src="img/portfolio/frido/imagens/foto01.jpg">
+        </div>
+        <div class="item item_1_2">
+            <img src="img/portfolio/frido/imagens/foto02.jpg">
+        </div>
+        <div class="item item_2_2">
+            <img src="img/portfolio/frido/imagens/foto03.jpg">
+        </div>
+        <div class="item item_2_2">
+            <img src="img/portfolio/frido/imagens/foto04.jpg">
+        </div>
+        <div class="item item_4_4">
+            <img src="img/portfolio/frido/imagens/foto05.jpg">
+        </div>
+    </div>
+</div>
