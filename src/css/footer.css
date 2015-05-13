@@ -3,24 +3,24 @@
     background-color: #08213f;
     bottom: 0;
     position: fixed;
-    width: 97%;
+    width: 100%;
     opacity: 0.9;
     z-index: 1000;
+    height: 170px;
 }
 .f-container {
     position: relative;
 }
 .f-container-center {
-    /*display: inline-block;*/
-    position: relative;
-    width: 100%;
+    left: 50%;
+    margin-left: -460px;
+    position: absolute;
+    width: 860px;
 }
 .f-container-content {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
     padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
 }
 
 /* Preview */
@@ -32,16 +32,18 @@
 .f-left {
     left: 0;
     top: 0px;
+    z-index: 50;
 }
 .f-preview.f-left:hover #PrevImagem{
     margin-left: 0px;
 }
 .f-right {
-    right: 0;
-    top: 0px;
+    right: 60px;
+    top: 0;
+    z-index: 50;
 }
 .f-preview.f-right:hover #NextImagem{
-    margin-left: -150px;
+    margin-left: -221px;
 }
 .f-arrow {
     background: #2768ae;
@@ -58,14 +60,16 @@
 .f-arrow > div > img{
     width: 6px;
 }
-.f-center{
+.f-center {
+    color: #fff;
+    margin-top: 28px;
     text-align: center;
-    color: #FFF;
 }
 
 /* central content  */
 .f-left{
     text-align: left;
+    width: 300px;
 }
 .foo-ul li.line {
     width: auto;
@@ -83,8 +87,227 @@
 .foo-left {
     float: left;
     position: relative;
+    width: 290px;
 }
 .foo-right {
+    color: #ffffff;
     float: left;
+    font-family: "montserratbold";
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 27px;
     position: relative;
+    width: 225px;
+}
+
+#Clear{
+    clear: both;
+}
+
+#BaseProjeto{
+    background-image: url("../img/bg_base_proj.png");
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+#PrevProj{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#NextProj{
+    height: 100%;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#PrevProj:hover #PrevImagem{
+    margin-left: 18px;
+}
+
+#PrevArrow{
+    background: #2768ae;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 8px;
+    padding-top: 54px;
+    position: absolute;
+    z-index: 10;
+}
+#PrevArrow img{width: 6px;}
+#PrevImagem{
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 250px;
+    top: 0;
+    position: absolute;
+    margin-left: -350px;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    -o-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+}
+#PrevImagem img{}
+#TituloPrevProj{
+    background-image: url("../img/bg_titsetas.png");
+    bottom: 0;
+    color: #ffffff;
+    font-family: "montserratregular";
+    font-style: italic;
+    padding-top: 4px;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    text-transform: uppercase;
+}
+
+
+#NextProj:hover #NextImagem{
+    margin-right: 18px;
+}
+
+#NextArrow{
+    background: #2768ae;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 8px;
+    padding-top: 54px;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+#NextArrow img{
+    width: 6px;
+}
+#NextImagem{
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 250px;
+    margin-left: 30px;
+    top: 0;
+    position: absolute;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    -o-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+}
+#NextImagem img{}
+
+#TituloNextProj{
+    background-image: url("../img/bg_titsetas.png");
+    bottom: 0;
+    color: #ffffff;
+    font-family: "montserratregular";
+    font-style: italic;
+    padding-top: 4px;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    text-transform: uppercase;
+}
+
+#SobreProjeto{
+    left: 50%;
+    position: absolute;
+    width: 947px;
+}
+#TitProjeto{
+    float: left;
+    margin-top: 15px;
+}
+#TitProjeto img{ width: 100%;}
+#LinhaSepProj{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 10px;
+    height: 145px;
+    background-image: url("../img/divisao.png");
+    background-repeat: no-repeat;
+}
+
+
+#TitAbout{
+    float: left;
+    font-family: "montserratbold";
+    margin-bottom: 10px;
+    width: 100%;
+}
+#TxtAbout{
+    font-family: "montserratregular";
+    font-size: 11px;
+    font-style: italic;
+}
+.dadoFicha{
+    font-family: "montserratregular";
+    font-size: 11px;
+    font-style: italic;
+}
+
+
+
+#ConteudoProjeto{
+    background: none repeat scroll 0 0 #030d19;
+    padding-bottom: 133px;
+}
+#ConteudoProjeto img{ width: 100%;}
+
+p.fm-space-low {
+    letter-spacing: 5px;
+    line-height: 0;
+}
+
+.foo-center{
+    float: left;
+    margin-right: 10px;
+    width: 270px;
+}
+
+/**
+ * Media Queries
+ * -----------------------------------------------------------------------------
+ */
+
+@-ms-viewport {
+    width: device-width;
+}
+@viewport {
+    width: device-width;
+}
+
+@media screen and (max-width: 480px){
+}
+
+@media screen and (min-width: 1024px){
+}
+
+@media screen and (min-width: 1280px){
+}
+
+@media screen and (min-width: 1600px) {
+}
+
+@media screen and (min-width: 2560px) {
+
+}
+
+
+
+/**
+ * 12.0 Print
+ * -----------------------------------------------------------------------------
+ */
+
+@media print {} .echo {
+
 }

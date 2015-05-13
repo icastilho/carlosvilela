@@ -1,14 +1,16 @@
 <div class="footer" >
-    <a  href="#/portfolio/detail/{{prevkey}}" >
-        <div class="f-preview f-left">
+    <div class="f-preview f-left">
+        <a  href="#/portfolio/detail/{{prevkey}}" >
             <div class="f-arrow "><div><img ng-src="img/seta_esq.png"></div></div>
             <div id="PrevImagem" style="background-image: url('img/portfolio/thumblr_{{prevkey}}.jpg')">
                 <div id="TituloPrevProj">{{prev.name}} {{prev.title}}</div>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
+
     <div class="f-container-center">
         <div class="f-container-content">
+            
             <div class="foo-left">
                 <div class="f-center">
                     <p class="fm-light fm-small fm-italic fm-space-low" >{{item.type}}</p>
@@ -16,35 +18,38 @@
                     <p class="fm-light fm-medium fm-italic fm-space-low">{{item.title}}</p>
                 </div>
             </div>
-            <div id="LinhaSepProj"><img src="img/divisao.png"></div>
+
+            <div id="LinhaSepProj"></div>
+
             <div class="foo-center">
-                <div id="AboutProj">
-                    <div id="TitAbout">ABOUT</div>
-                    <div id="TxtAbout">
-                        {{item.about}}
-                    </div>
+                <div id="TitAbout">ABOUT</div>
+                <div id="TxtAbout">
+                    {{item.about}}
                 </div>
             </div>
-            <div id="LinhaSepProj"><img src="img/divisao.png"></div>
+
+            <div id="LinhaSepProj"></div>
+
             <div class="foo-right">
-                <div id="FichaProj">
-                    AGENCY: <span class="dadoFicha">{{item.agency}}</span><br>
-                    CLIENT: <span class="dadoFicha">{{item.client}}</span><br>
-                    ROLE: <span class="dadoFicha">{{item.role}}</span><br>
-                    FARM EVA: <span class="dadoFicha">{{item.farmEva}}</span>
-                </div>
+                AGENCY: <span class="dadoFicha">{{item.agency}}</span><br>
+                CLIENT: <span class="dadoFicha">{{item.client}}</span><br>
+                ROLE: <span class="dadoFicha">{{item.role}}</span><br>
+                FARM EVA: <span class="dadoFicha">{{item.farmEva}}</span>
             </div>
+
         </div>
     </div>
-    <a  href="" ng-click="#/portfolio/detail/{{nextkey}}">
-        <div class="f-preview f-right">
+    
+    <div class="f-preview f-right">
+        <a  href="" ng-click="#/portfolio/detail/{{nextkey}}">
             <div class="f-arrow"><div><img ng-src="img/seta_dir.png"></div></div>
             <div id="NextImagem" style="background-image: url('img/portfolio/thumblr_{{nextkey}}.jpg')">
                 <div id="TituloNextProj">{{next.name}} {{next.title}}</div>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
 </div>
+
 <div class="cover">
     <img ng-src="img/portfolio/{{id}}/cover.jpg">
 </div>
