@@ -1,10 +1,8 @@
 /* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
-html {overflow-x: hidden;}
 
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     color: #FFF;
     background: #08213f url('../img/fundo_intermediario.jpg');
     margin-left: 60px;
@@ -16,4 +14,18 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+
+
+.view-animation.ng-enter, .view-animation.ng-leave {
+    transition:0.5s linear all;
+    opacity:0;
+}
+.view-animation.ng-leave,
+.view-animation.ng-enter.ng-enter-active {
+    opacity:1;
+}
+.view-animation.ng-leave.ng-leave-active {
+    opacity:1;
 }

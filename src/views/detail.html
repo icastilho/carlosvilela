@@ -1,9 +1,7 @@
-
-
 <div class="footer" >
     <a  href="#/portfolio/detail/{{prevkey}}" >
         <div class="f-preview f-left">
-            <div class="f-arrow "><div><img src="img/seta_esq.png"></div></div>
+            <div class="f-arrow "><div><img ng-src="img/seta_esq.png"></div></div>
             <div id="PrevImagem" style="background-image: url('img/portfolio/thumblr_{{prevkey}}.jpg')">
                 <div id="TituloPrevProj">{{prev.name}} {{prev.title}}</div>
             </div>
@@ -38,9 +36,9 @@
             </div>
         </div>
     </div>
-    <a  href="#/portfolio/detail/{{nextkey}}" >
+    <a  href="" ng-click="#/portfolio/detail/{{nextkey}}">
         <div class="f-preview f-right">
-            <div class="f-arrow"><div><img src="img/seta_dir.png"></div></div>
+            <div class="f-arrow"><div><img ng-src="img/seta_dir.png"></div></div>
             <div id="NextImagem" style="background-image: url('img/portfolio/thumblr_{{nextkey}}.jpg')">
                 <div id="TituloNextProj">{{next.name}} {{next.title}}</div>
             </div>

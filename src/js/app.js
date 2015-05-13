@@ -1,6 +1,7 @@
 var carlosvilelaApp = angular.module('carlosvilela', [
     'ngRoute',
     'ui.router',
+    'ngAnimate',
     'carlosvilela.controller'
 ]);
 
@@ -30,3 +31,6 @@ var carlosvilelaApp = angular.module('carlosvilela', [
                 controller: 'DetailCtrl'
             });
     }]);
+
+
+
