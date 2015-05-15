@@ -1,6 +1,5 @@
 .diamondswrap{
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 .diamonds {
     text-align: center;
@@ -113,3 +112,6 @@
     opacity: 1;
     transition: all .25s linear;
 }
+
+
+

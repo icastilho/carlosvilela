@@ -14,15 +14,16 @@ controller
             e.preventDefault();
         });
     })
-    .controller('PortfolioCtrl', function ($scope) {
+    .controller('PortfolioCtrl', function ($scope, $window) {
+            console.log('PortfolioCtrl');
+            $(".diamondswrap").diamonds({
+                size: 440,
+                gap: 1,
+                hideIncompleteRow: false,
+                autoRedraw: true,
+                itemSelector: ".item"
+            });
 
-        $(".diamondswrap").diamonds({
-            size : 440,
-            gap : 1,
-            hideIncompleteRow :false,
-            autoRedraw :true,
-            itemSelector : ".item"
-        });
 
         $('.item').hover(
             function(){
@@ -33,6 +34,7 @@ controller
                 $(this).parent().find('.itemhover').removeClass('itemhoverdover');
                 $(this).find('img').removeClass('dimond-box-img-hover');
             });
+
     })
     .controller('DetailCtrl', function ($scope, $stateParams) {
 
@@ -58,16 +60,10 @@ controller
             $scope.next = portifolios[$scope.nextkey];
         }
 
-        $scope.getDetailUrl = function(id){
-            console.log(id);
-            var url = 'views/portfolio/'+id+'.html';
-            console.log(url);
-            return url;
-        }
+
         $scope.packeryInit = function () {
             console.log('packeryInit');
             var $container = $('#container_mosaico').imagesLoaded( function(){
-
               $container.packery({
                 itemSelector: '.item',
                 gutter: '.gutter-sizer',
@@ -86,7 +82,7 @@ var portifolios = {
         name: 'BATAVINHO',
         type: 'PDV',
         title: 'É O BICHO',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'Promotional campaign to distribute small animals in EVA, attached to yogurt cartons as gifts. Colorful and fun, the theme was "Farm Life".',
         agency: 'AGEVOLE',
         client: 'BATAVO',
         role: 'ART DIRECTION',
@@ -98,7 +94,7 @@ var portifolios = {
         name: 'RIUNITE',
         type: 'ADVERTISING',
         title: 'BEST WAY',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'An Advertment focused on introducing a new idea to the consumer, it suggested drinking lambrusco with ice. At this time Riunite had just arrived into the Brazilian market.',
         agency: 'AGEVOLE',
         client: 'SANTAR',
         role: 'ART DIRECTION'
@@ -111,7 +107,7 @@ var portifolios = {
         name: 'BIO RITMO',
         type: 'CAMPAING',
         title: 'TWISTED LOVE',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'Promotional campaign focused on Valentine`s Day. Gym members could take their partners to work out at their gym for one month at a discounted price.',
         agency: 'GRANZA',
         client: 'BIO RITMO',
         role: 'ART DIRECTION'
@@ -122,7 +118,7 @@ var portifolios = {
         name: 'ELEGÊ',
         type: 'CAMPAING',
         title: 'SWEET DREAMS',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'Promotional campaign using a "fairy tales" concept, it proposed giving customers beautiful themed pillows as gifts.',
         agency: 'AGEVOLE',
         client: 'ELEGÊ',
         role: 'ART DIRECTION'
@@ -133,7 +129,7 @@ var portifolios = {
         name: 'ST. HELENA',
         type: 'PDV',
         title: 'LOUNGE',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'A relaxed and cozy space for wine enthusiasts, making it possible to try a wide variety of flavors and recommendations. This work won an award in the Brazilian Festival of Promotion, Trade Marketing, Events and Design in the “drinks" category (gold).',
         agency: 'AGEVOLE',
         client: 'INTERFOOD',
         role: 'ART DIRECTION, 3D DESIGN'
@@ -144,7 +140,7 @@ var portifolios = {
         name: 'JACK`S',
         type: 'DISPLAY',
         title: 'ISLAND',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'This display consisted of 4 parts that may be displayed seperately or assembled into one exhibit. The functionality of this display was awarded in the Brazilian Festival of Promotion , Trade Marketing, Events and Design in the “Display” category (gold).',
         agency: 'AGEVOLE',
         client: 'JACK DANIEL’S',
         role: 'ART DIRECTION, 3D DESIGN'
@@ -155,7 +151,7 @@ var portifolios = {
         name: 'FRIDO',
         type: 'BRANDING',
         title: 'WEAR',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'Mens clothing brand with strong references to "Frida Kahalo”. Their logo is Frida’s most stiking feature (eyebrows) meshed with a man`s mustache, representing the feminine side of masculinity.',
         agency: 'CARLOS VILELA',
         client: 'FRIDO',
         role: 'ART DIRECTION'
@@ -166,7 +162,7 @@ var portifolios = {
         name: 'UP',
         type: 'BRANDING',
         title: 'PRODUÇÕES',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'By having manual techniques and detailists both in origami as well as film projects, use these directions in their resolutions. With this merger, the brand was developed.',
         agency: 'CARLOS VILELA',
         client: 'UP PRODUÇÕES',
         role: 'ART DIRECTION'
@@ -177,7 +173,7 @@ var portifolios = {
         name: 'BIO KIDS',
         type: 'CAMPAING',
         title: 'POOL',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'A Campaign to encourage children to swim properly, with creatures from the seabed. Based in stages, children win medals by completing the goals proposed by instruction cards.',
         agency: 'GRANZA',
         client: 'BIO RITMO',
         role: 'ART DIRECTION'
@@ -188,7 +184,7 @@ var portifolios = {
         name: 'ABA',
         type: 'CAMPAING',
         title: '2014',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'Every year, the ABA promotes events related to the world of communication. Its visual identity was based on the statement "Turn your questions into statements”.',
         agency: 'GRANZA',
         client: 'ABA',
         role: 'ART DIRECTION'
@@ -199,7 +195,7 @@ var portifolios = {
         name: 'CARBALLO',
         type: 'STAND',
         title: 'SUPER BAHIA',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: '110m² of space was developed for the event "Super Bahia" 2012, containing a meeting room, kitchen, bar and a lounge for tasting.',
         agency: 'AGEVOLE',
         client: 'CARBALLO FARO',
         role: 'ART DIRECTION, 3D DESIGN'
@@ -210,7 +206,7 @@ var portifolios = {
         name: 'JACK’S',
         type: 'TAYLOR MADE',
         title: 'LOUNGE',
-        about: 'Ruinite é um espumante que tinha recem-chegado ao brasil e tinha o desafio de demonstrar que a melhorforma de apreciar a bebida seria gelada. com isso criei a propaganda, trocando a.',
+        about: 'Surroundings for the nightclub "Boox", promoting a Jack Daniel’s.',
         agency: 'AGEVOLE',
         client: 'JACK DANIEL’S',
         role: 'ART DIRECTION, 3D DESIGN'
