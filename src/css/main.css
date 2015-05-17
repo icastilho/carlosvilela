@@ -6,8 +6,8 @@ body {
     color: #FFF;
     background: #08213f url('../img/fundo_intermediario.jpg');
     margin-left: 60px;
+    overflow-x: hidden;
 }
-
 a, a:active, a:focus {color: #FFF; text-decoration: none;}
 
 ul {
@@ -15,8 +15,6 @@ ul {
     padding: 0;
     list-style: none;
 }
-
-
 
 .view-animation.ng-enter, .view-animation.ng-leave {
     transition:0.5s linear all;

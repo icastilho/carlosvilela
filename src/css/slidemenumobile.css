@@ -56,6 +56,16 @@
     position: absolute;
     top: 25%;
 }
+
+.faixa-middle a > div {
+    height: 55px;
+}
+
+.faixa-middle a > div > img, .faixa-middle a > div > p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 menu {
     margin: 0;
     padding: 0;
@@ -76,10 +86,7 @@ menu > ul {
 
 }
 menu > ul > li {
-    margin-left: 2px;
-    text-align: left;
-    vertical-align: middle;
-    height: 37px;
+    margin-left: 4px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -159,6 +166,16 @@ header, .main {
     text-align: center;
 }
 
+
+.faixa-middle div.social {
+    height: 64px;
+}
+
+.faixa-middle div.social ul{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 div.social ul li {
     display: inline-block;

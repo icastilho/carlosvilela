@@ -30,7 +30,12 @@ var carlosvilelaApp = angular.module('carlosvilela', [
                 templateUrl: 'views/detail.html',
                 controller: 'DetailCtrl'
             });
-    }]);
+    }])
+        .run(["$rootScope", "$anchorScroll" , function ($rootScope, $anchorScroll) {
+            $rootScope.$on("$locationChangeSuccess", function() {
+                $anchorScroll();
+            });
+        }]);
 
 
 

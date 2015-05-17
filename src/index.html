@@ -23,14 +23,10 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<menu >
-    <ul class="faixa-top">
-        <li></li>
-        <li ><a href="" class="toggle-nav"><p class="fm-regular fm-italic fm-space-low">MENU</p></a></li>
-    </ul>
+<menu ng-controller="MenuCtrl">
     <ul class="faixa-middle">
-        <li><a href="#/portfolio"><p class="fm-regular fm-italic fm-space-low">PORTFOLIO</p></a></li>
-        <li><a href="#/about"><p class="fm-regular fm-italic fm-space-low">ABOUT</p></a></li>
+        <li><a href="#/portfolio" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">PORTFOLIO</p></div></a></li>
+        <li><a href="#/about" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">ABOUT</p></div></a></li>
         <li>
             <div class="social">
                 <ul >
@@ -47,17 +43,17 @@
 <div class="faixa">
     <ul class="faixa-top">
         <li><img src="img/logo_faixa.png"></li>
-        <li ng-controller="MenuCtrl"><a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a></li>
+        <li ><a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a></li>
     </ul>
     <ul class="faixa-middle">
-        <li><a href="#/portfolio"><div><img src="img/port.png"></div></a></li>
-        <li><a href="#/about"><div><img src="img/about.png"></div></a></li>
-        <li><div><img src="img/social.png"></div></li>
+        <li><a href="#/portfolio" title="Portfolio"><div><img src="img/port.png"></div></a></li>
+        <li><a href="#/about" title="About"><div><img src="img/about.png"></div></a></li>
+        <li ><a href="" class="toggle-nav" title="Social"><div class="social"><img src="img/social.png"></div></a></li>
     </ul>
 </div>
 <section class="main"  >
 <!-- Content Body -->
-    <div ui-view class="view-animation"></div>
+    <div ui-view class="view-animation" ></div>
 <!-- Content Body -->
 </section>
 <!--<script type="text/javascript" src="bower_components/zepto/zepto.min.js"></script>-->

@@ -7,7 +7,11 @@ controller
     .controller('CarlosvilelaCtrl', function () {
 
     })
-    .controller('MenuCtrl', function () {
+    .controller('MenuCtrl', function ($scope) {
+
+        $scope.togglemenu = function(){
+            $('html').toggleClass('menu-active');
+        };
 
         $('.toggle-nav').on('click touchstart', function(e){
             $('html').toggleClass('menu-active');
