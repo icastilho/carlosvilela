@@ -57,13 +57,27 @@
 }
 </style>
 
+<script src='http://code.jquery.com/jquery-1.9.1.min.js' type='text/javascript'></script>
+<script src='../../js/jquery.reel.js' type='text/javascript'></script>
+
 <div id="MosaicoProjetos">
     <div id="container_mosaico" ng-init="packeryInit()">
         <div class="gutter-sizer"></div>
         <div class="grid-sizer"></div>
         <div class="grid-sizerheight"></div>
         <div class="item item_2_2">
-            <img src="img/portfolio/sthelena/imagens/foto00.jpg">
+            <img id="image" src="../../img/portfolio/sthelena/360/lounge_00000.jpg"/>
+            <script>
+              $('#image').reel({
+                footage:     10,
+                cw:          true,
+                orbital:     3,
+                inversed:    true,
+                speed:       0.7,
+                images:      '../../img/portfolio/sthelena/360/lounge_000##.jpg'
+                }
+              });
+            </script>
         </div>
         <div class="item item_2_2">
             <img src="img/portfolio/sthelena/imagens/foto00.jpg">
