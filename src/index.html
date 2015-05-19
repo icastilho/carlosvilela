@@ -25,8 +25,8 @@
 
 <menu ng-controller="MenuCtrl">
     <ul class="faixa-middle">
-        <li><a href="#/portfolio" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">PORTFOLIO</p></div></a></li>
-        <li><a href="#/about" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">ABOUT</p></div></a></li>
+        <li><a ng-href="#/portfolio" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">PORTFOLIO</p></div></a></li>
+        <li><a ng-href="#/about" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">ABOUT</p></div></a></li>
         <li>
             <div class="social">
                 <ul >
@@ -42,12 +42,11 @@
 </menu>
 <div class="faixa">
     <ul class="faixa-top">
-        <li><img src="img/logo_faixa.png"></li>
         <li ><a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a></li>
     </ul>
     <ul class="faixa-middle">
-        <li><a href="#/portfolio" title="Portfolio"><div><img src="img/port.png"></div></a></li>
-        <li><a href="#/about" title="About"><div><img src="img/about.png"></div></a></li>
+        <li><a ng-href="#/portfolio" title="Portfolio"><div><img src="img/port.png"></div></a></li>
+        <li><a ng-href="#/about" title="About"><div><img src="img/about.png"></div></a></li>
         <li ><a href="" class="toggle-nav" title="Social"><div class="social"><img src="img/social.png"></div></a></li>
     </ul>
 </div>

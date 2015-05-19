@@ -6,15 +6,10 @@ var carlosvilelaApp = angular.module('carlosvilela', [
 ]);
 
     carlosvilelaApp.config(['$stateProvider', '$urlRouterProvider', '$provide',
-    function($stateProvider, $urlRouterProvider, $provide) {
+    function($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/portfolio');
 
             $stateProvider
-/*            .state('carlosvilela', {
-                url: "/carlosvilela",
-                abstract: true,
-                templateUrl: "index.html"
-            })*/
             .state('about', {
                 url: '/about',
                 templateUrl: 'views/about.html',

@@ -1,13 +1,14 @@
 
 .cover img {
     width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 .dust-cover > img {
     width: 100%;
 }
 div.portifolio-content {
     width: 1800px;
-    margin: 1%;
     float: left;
     position: absolute;
     vertical-align: top;
@@ -16,7 +17,6 @@ div.portifolio-content {
 
 div.portifolio-content  span {
     display: inline-block;
-    padding: 1%;
     position: relative;
 }
 div.portifolio-content img{

@@ -40,7 +40,12 @@ controller
             });
 
     })
-    .controller('DetailCtrl', function ($scope, $stateParams) {
+    .controller('DetailCtrl', function ($scope, $stateParams, $location) {
+
+        $scope.go = function ( path ) {
+            console.log(path);
+            $location.path( path );
+        };
 
         $scope.item  = portifolios[$stateParams.id];
         $scope.id = $stateParams.id;

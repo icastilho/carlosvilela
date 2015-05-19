@@ -1,11 +1,11 @@
 /* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
 
 body {
-    margin: 0;
+
     padding: 0;
     color: #FFF;
     background: #08213f url('../img/fundo_intermediario.jpg');
-    margin-left: 60px;
+    margin: 0 0  0 60px;
     overflow-x: hidden;
 }
 a, a:active, a:focus {color: #FFF; text-decoration: none;}
@@ -16,14 +16,36 @@ ul {
     list-style: none;
 }
 
-.view-animation.ng-enter, .view-animation.ng-leave {
-    transition:0.5s linear all;
+.view-animation.ng-enter {
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition:1s linear all;
     opacity:0;
 }
-.view-animation.ng-leave,
+
+.view-animation.ng-leave{
+    opacity:0;
+}
 .view-animation.ng-enter.ng-enter-active {
     opacity:1;
 }
 .view-animation.ng-leave.ng-leave-active {
     opacity:1;
+}
+
+
+.logo-flutuante {
+    top: 0;
+    right: 5%;
+    position: absolute;
+    float: right;
+
+}
+
+.about-content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 800px;
 }

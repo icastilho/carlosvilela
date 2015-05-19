@@ -97,6 +97,7 @@
     line-height: 27px;
     position: relative;
     width: 225px;
+    margin-top: 23px;
 }
 
 #Clear{
@@ -155,12 +156,14 @@
 }
 #PrevImagem img{}
 #TituloPrevProj{
-    background-image: url("../img/bg_titsetas.png");
+    background-color: #01081e;
+    font-size: 12px;
     bottom: 0;
     color: #ffffff;
     font-family: "montserratregular";
     font-style: italic;
     padding-top: 4px;
+    padding-bottom: 4px;
     position: absolute;
     text-align: center;
     width: 250px;
@@ -201,12 +204,14 @@
 #NextImagem img{}
 
 #TituloNextProj{
-    background-image: url("../img/bg_titsetas.png");
+    background-color: #01081e;
+    font-size: 12px;
     bottom: 0;
     color: #ffffff;
     font-family: "montserratregular";
     font-style: italic;
     padding-top: 4px;
+    padding-bottom: 4px;
     position: absolute;
     text-align: center;
     width: 250px;
@@ -228,9 +233,10 @@
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
+    margin-top: 13px;
     overflow: hidden;
     width: 10px;
-    height: 145px;
+    height: 115px;
     background-image: url("../img/divisao.png");
     background-repeat: no-repeat;
 }
@@ -238,13 +244,15 @@
 
 #TitAbout{
     float: left;
-    font-family: "montserratbold";
+    font-family: "montserratregular";
+    font-size: 15px;
     margin-bottom: 10px;
     width: 100%;
+
 }
 #TxtAbout{
-    font-family: "montserratregular";
-    font-size: 11px;
+    font-family: "montserratlight";
+    font-size: 12px;
     font-style: italic;
 }
 .dadoFicha{
@@ -261,8 +269,7 @@
 }
 #ConteudoProjeto img{ width: 100%;}
 
-p.fm-space-low {
-    letter-spacing: 5px;
+p.fm-space0 {
     line-height: 0;
 }
 
@@ -270,6 +277,7 @@ p.fm-space-low {
     float: left;
     margin-right: 10px;
     width: 270px;
+    margin-top: 23px;
 }
 
 /**
