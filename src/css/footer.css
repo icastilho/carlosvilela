@@ -90,14 +90,16 @@
 }
 .foo-right {
     color: #ffffff;
+    display: table;
+    height: 116px;
     float: left;
     font-family: "montserratbold";
     font-size: 12px;
     letter-spacing: 1px;
     line-height: 27px;
+    margin-top: 13px;
     position: relative;
     width: 225px;
-    margin-top: 23px;
 }
 
 #Clear{
@@ -241,6 +243,19 @@
     background-repeat: no-repeat;
 }
 
+#LinhaSepProj2{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 13px;
+    overflow: hidden;
+    width: 10px;
+    height: 115px;
+    background-image: url("../img/divisao.png");
+    background-repeat: no-repeat;
+}
+
 
 #TitAbout{
     float: left;
@@ -277,8 +292,16 @@ p.fm-space0 {
     float: left;
     margin-right: 10px;
     width: 270px;
-    margin-top: 23px;
+    display: table;
+    height: 116px;
+    margin-top: 12px;
 }
+
+#Video{ margin-bottom: -8px;}
+#Video iframe{ width: 100%;}
+
+.cover{margin-bottom: -5px;}
+.dust-cover{margin-bottom: -5px;}
 
 /**
  * Media Queries
@@ -293,19 +316,168 @@ p.fm-space0 {
 }
 
 @media screen and (max-width: 480px){
+    .f-container-center {
+        margin-left: -208px;
+        width: 355px;
+    }
+    .footer {
+        height: 320px;
+    }
+
+    #LinhaSepProj {
+        display: none;
+    }
+    .foo-left {
+        width: 357px;
+    }
+    #AjustaMob{clear: both;}
+    #TxtAbout {
+        font-size: 11px;
+    }
+
+    .foo-right {
+    color: #ffffff;
+    display: table;
+    float: left;
+    font-family: "montserratbold";
+    font-size: 11px;
+    height: auto;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-top: 13px;
+    position: relative;
+    width: 152px;
+}
+
+    .foo-center {
+        background-image: url("../img/divisao.png");
+        background-position: right center;
+        background-repeat: repeat-y;
+        display: table;
+        float: left;
+        height: auto;
+        margin: 12px 20px 20px -10px;
+        padding-right: 20px;
+        width: 170px;
+    }
+
+    #LinhaSepProj2 {
+        background-image: url("../img/divisao.png");
+        background-repeat: no-repeat;
+        float: left;
+        height: 138px;
+        margin: 13px 10px 20px;
+        overflow: hidden;
+        width: 10px;
+        display: none;
+    }
+
+    .f-container-center {
+        margin-left: -208px;
+        position: relative;
+        width: 355px;
+    }
+
+    .foo-left {
+    float: none;
+    width: 357px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .f-container-content {
+    padding-bottom: 0;
+    padding-top: 20px;
+    width: 100%;
+    }
+
+    .f-left {
+    height: 150px;
+    }
+    .f-right {
+    height: 150px;
+    }
+    #Video iframe {
+    height: 309px;
+    width: 100%;
+}
 }
 
 @media screen and (min-width: 1024px){
+#TxtAbout {
+    font-size: 11px;
+}
+#Video iframe {
+    height: 689px;
+    width: 100%;
+}
 }
 
 @media screen and (min-width: 1280px){
+#TxtAbout {
+    font-size: 12px;
+}
+.f-container-center {
+    margin-left: -540px;
+    width: 1030px;
+}
+
+.foo-center {
+    width: 430px;
+}
+
+#Video iframe {
+    height: 929px;
+    width: 100%;
+}
+
+}
+@media screen and (min-width: 1366px) {
+    #Video iframe {
+        height: 989px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #Video iframe {
+    height: 1039px;
+    width: 100%;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1600px) {
+    #Video iframe {
+    height: 1159px;
+    width: 100%;
+    }
 }
 
 @media screen and (min-width: 1600px) {
+    #Video iframe {
+        height: 1219px;
+        width: 100%;
+    }
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 1920px) {
+    #Video iframe {
+        height: 1399px;
+        width: 100%;
+    }
+}
 
+
+@media screen and (min-width: 2560px) {
+    #Video iframe {
+        height: 1444px;
+        width: 100%;
+    }
 }
 
 
