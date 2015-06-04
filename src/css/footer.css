@@ -297,8 +297,21 @@ p.fm-space0 {
     margin-top: 12px;
 }
 
-#Video{ margin-bottom: -8px;}
-#Video iframe{ width: 100%;}
+.video {
+    width: 100%;
+    background-color: #040c19;
+}
+.video > div {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+
+}
+.video iframe{
+    width: 720px;
+}
 
 .cover{margin-bottom: -5px;}
 .dust-cover{margin-bottom: -5px;}

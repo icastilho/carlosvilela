@@ -23,6 +23,9 @@
     "test",
     "tests"
   ],
+  "install": {
+    "path": "src/js/libs"
+  },
   "dependencies": {
     "packery": "~1.4.1",
     "angular": "~1.3.15",
@@ -34,6 +37,7 @@
     "jquery-ui": "~1.11.4",
     "zepto": "~1.1.6",
     "bootstrap": "~3.3.4",
-    "angular-animate": "~1.3.15"
+    "angular-animate": "~1.3.15",
+    "threesixty-slider": "~2.0.5"
   }
 }

@@ -128,7 +128,7 @@ gulp.task('copy:normalize', function () {
 gulp.task('lint:js', function () {
     return gulp.src([
         'gulpfile.js',
-        dirs.src + '/js/*.js',
+       // dirs.src + '/js/*.js',
         dirs.test + '/*.js'
     ])//.pipe(plugins.jscs())
       .pipe(plugins.jshint())

@@ -83,6 +83,15 @@ controller
             });
         };
 
+       $scope.Init3D = function () {
+           var presentation = new javascriptViewer($('#product_image_x'),{
+               total_frames:60,
+               target_id:'image_holder_x'
+           });
+           presentation.start();
+
+       }
+
     });
 
 
