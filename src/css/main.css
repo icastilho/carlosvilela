@@ -7,6 +7,7 @@ body {
     background: #08213f url('../img/fundo_intermediario.jpg');
     margin: 0 0  0 60px;
     overflow-x: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 a, a:active, a:focus {color: #FFF; text-decoration: none;}
 
