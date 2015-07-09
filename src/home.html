@@ -1,61 +1,49 @@
-<style>
-    .gutter-sizer{width: 20px;}
-    .item_1_1{width: 25%;}
-    .item_1_2{width: 25%;}
+<html>
+<header>
+    <link rel="stylesheet" href="bower_components/threesixty-slider/src/styles/threesixty.css">
+</header>
+<body>
 
-    .item_2_1{width: 50%;}
-    .item_2_2{width: 50%;}
-    .item_2_3{width: 50%;}
-    .item_2_4{width: 50%;}
-
-    .item_3_1{width: 75%;}
-    .item_3_2{width: 75%;}
-    .item_3_3{width: 75%;}
-    .item_3_4{width: 75%;}
-
-    .item_4_1{width: 100%;}
-    .item_4_2{width: 100%;}
-    .item_4_3{width: 100%;}
-    .item_4_4{width: 100%;}
-</style>
-
-<div id="container_mosaico" >
-    <div class="item item_4_2">
-        <img src="img/portfolio/batavinho/bloc1.jpg">
+<div class="threesixty car">
+    <div class="spinner">
+        <span>0%</span>
     </div>
-    <div class="item item_3_3">
-        <img src="img/portfolio/batavinho/bloc2.jpg">
-    </div>
-    <div class="item item_1_2">
-        <img src="img/portfolio/batavinho/bloc3.jpg">
-    </div>
-    <div class="item item_1_1">
-        <img src="img/portfolio/batavinho/bloc4.jpg">
-    </div>
-    <div class="item item_1_2">
-        <img src="img/portfolio/batavinho/bloc5.jpg">
-    </div>
-    <div class="item item_1_2">
-        <img src="img/portfolio/batavinho/bloc6.jpg">
-    </div>
-    <div class="item item_2_2">
-        <img src="img/portfolio/batavinho/bloc7.jpg">
-    </div>
+    <ol class="threesixty_images"></ol>
 </div>
+
+
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script type="text/javascript" src="bower_components/packery/dist/packery.pkgd.min.js"></script>
+
+<script type="text/javascript" src="bower_components/threesixty-slider/src/threesixty.js"></script>
+
 <script>
 
-    $( document ).ready(function() {
-        var $container = $('#container_mosaico');
-        console.log($container);
-        $container.packery({
-            itemSelector: '.item',
-            gutter: 20
-        });
-//        $('#container_mosaico').packery({"gutter": ".gutter-sizer", "itemSelector": ".item"});
+    $(function() {
+        window.onload = init;
+
+        var car;
+        function init(){
+            car = $('.car').ThreeSixty({
+                totalFrames: 52, // Total no. of image you have for 360 slider
+                endFrame: 52, // end frame for the auto spin animation
+                currentFrame: 1, // This the start frame for auto spin
+                framerate:10,
+                imgList: '.threesixty_images', // selector for image list
+                progress: '.spinner', // selector to show the loading progress
+                imagePath:'bower_components/threesixty-slider/assets/', // path of the image assets
+                filePrefix: '', // file prefix if any
+                ext: '.png', // extention for the assets
+                height: 1000,
+                width: 447,
+                onReady: function(){
+                    console.log("I'm already!!");
+                    ilha.play();
+                }
+            });
+
+        }
     });
 
 </script>
+</body>
+</html>

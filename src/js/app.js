@@ -15,6 +15,11 @@ var carlosvilelaApp = angular.module('carlosvilela', [
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl'
             })
+            .state('test', {
+               url: '/test',
+               templateUrl: 'views/teste.html',
+               controller: 'CarlosvilelaCtrl'
+            })
             .state('portfolio', {
                 url: '/portfolio',
                 templateUrl: 'views/portfolio.html',
@@ -25,6 +30,8 @@ var carlosvilelaApp = angular.module('carlosvilela', [
                 templateUrl: 'views/detail.html',
                 controller: 'DetailCtrl'
             });
+
+
     }])
         .run(["$rootScope", "$anchorScroll" , function ($rootScope, $anchorScroll) {
             $rootScope.$on("$locationChangeSuccess", function() {

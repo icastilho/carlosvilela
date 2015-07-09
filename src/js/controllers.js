@@ -4,7 +4,8 @@
 var controller = angular.module('carlosvilela.controller', []);
 
 controller
-    .controller('CarlosvilelaCtrl', function () {
+    .controller('CarlosvilelaCtrl', function ($scope) {
+
 
     })
     .controller('MenuCtrl', function ($scope) {
@@ -26,7 +27,7 @@ controller
                 hideIncompleteRow: false,
                 autoRedraw: true,
                 itemSelector: ".item"
-            });
+            });1000
 
 
         $('.item').hover(
@@ -70,6 +71,8 @@ controller
         }
 
 
+
+
         $scope.packeryInit = function () {
             console.log('packeryInit');
             var $container = $('#container_mosaico').imagesLoaded( function(){
@@ -83,14 +86,29 @@ controller
             });
         };
 
-       $scope.Init3D = function () {
-           var presentation = new javascriptViewer($('#product_image_x'),{
-               total_frames:60,
-               target_id:'image_holder_x'
-           });
-           presentation.start();
+        var obj3d;
+        $scope.Init3D = function () {
 
-       }
+            obj3d = $('.obj3d').ThreeSixty({
+                totalFrames: 60, // Total no. of image you have for 360 slider
+                endFrame: 60, // end frame for the auto spin animation
+                currentFrame: 1, // This the start frame for auto spin
+                imgList: '.threesixty_images', // selector for image list
+                progress: '.spinner', // selector to show the loading progress
+                imagePath:'img/portfolio/'+$stateParams.id+'/360/', // path of the image assets
+                //filePrefix: $stateParams.id+'_', // file prefix if any
+                ext: '.jpg', // extention for the assets
+                height: 860,
+                width: 480,
+                responsive: true,
+                zeroPadding: true,
+                onReady: function(){
+                    obj3d.play();
+                }
+            });
+            console.log('End 3D');
+        };
+
 
     });
 

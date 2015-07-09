@@ -160,6 +160,13 @@ header, .main {
     -ms-transform: translateX(170px);
     transform: translateX(170px);
 }
+.menu-active footer {
+    display: none;
+}
+.menu-active #MosaicoProjetos{
+    padding-bottom: 10px;
+}
+
 .logo {
     padding-bottom: 8%;
     padding-top: 8%;
