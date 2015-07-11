@@ -24,7 +24,34 @@
     "tests"
   ],
   "install": {
-    "path": "src/js/libs"
+    "base":  "src/libs",
+    "path" : {
+      "js": "{name}/js",
+      "css": "{name}/css",
+      "otf": "{name}/fonts",
+      "eot": "{name}/fonts",
+      "svg": "{name}/fonts",
+      "ttf": "{name}/fonts",
+      "woff": "{name}/fonts",
+      "woff2": "{name}/fonts"
+    },
+    "sources" : {
+      "imagesloaded" : "src/bower_components/imagesloaded/imagesloaded.pkgd.js",
+      "packery" : "src/bower_components/packery/dist/packery.pkgd.js",
+      "threesixty-slider" : [
+        "src/bower_components/threesixty-slider/src/styles/threesixty.css",
+        "src/bower_components/threesixty-slider/src/threesixty.js"
+        ],
+      "font-awesome" : [
+        "src/bower_components/font-awesome/css/font-awesome.css",
+        "src/bower_components/font-awesome/fonts/FontAwesome.otf",
+        "src/bower_components/font-awesome/fonts/fontawesome-webfont.eot",
+        "src/bower_components/font-awesome/fonts/fontawesome-webfont.svg",
+        "src/bower_components/font-awesome/fonts/fontawesome-webfont.ttf",
+        "src/bower_components/font-awesome/fonts/fontawesome-webfont.woff",
+        "src/bower_components/font-awesome/fonts/fontawesome-webfont.woff2"
+      ]
+    }
   },
   "dependencies": {
     "packery": "~1.4.1",
