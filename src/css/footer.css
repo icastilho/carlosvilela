@@ -329,19 +329,8 @@ p.fm-space0 {
 }
 
 @media screen and (max-width: 480px){
-    .f-container-center {
-        margin-left: -208px;
-        width: 355px;
-    }
-    .footer {
-        height: 320px;
-    }
-
     #LinhaSepProj {
         display: none;
-    }
-    .foo-left {
-        width: 357px;
     }
     #AjustaMob{clear: both;}
     #TxtAbout {
@@ -386,7 +375,7 @@ p.fm-space0 {
     }
 
     .f-container-center {
-        margin-left: -208px;
+        margin-left: -166px;
         position: relative;
         width: 355px;
     }
@@ -398,6 +387,7 @@ p.fm-space0 {
 
     .footer {
         height: auto;
+        position: relative;
     }
 
     .f-container-content {
@@ -411,6 +401,7 @@ p.fm-space0 {
     }
     .f-right {
     height: 150px;
+    right: 0px;
     }
     #Video iframe {
     height: 309px;

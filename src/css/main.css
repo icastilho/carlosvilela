@@ -4,7 +4,7 @@ body {
 
     padding: 0;
     color: #FFF;
-    background: #08213f url('../img/fundo_intermediario.jpg');
+    background: #08213f url("../img/fundo_intermediario.jpg") repeat fixed 0 0;
     margin: 0 0  0 60px;
     overflow-x: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -50,3 +50,14 @@ ul {
     text-align: left;
     width: 800px;
 }
+
+@media screen and (max-width: 480px){
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+}
+
+

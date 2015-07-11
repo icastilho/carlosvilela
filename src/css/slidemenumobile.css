@@ -190,4 +190,105 @@ div.social ul li {
     padding-right: 4px;
 }
 
+.garrafa_mob{display: none;}
+.garrafa_desk{display: block;}
+
+
+@media screen and (max-width: 480px){
+    .faixa {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .faixa li {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-top: 9px;
+        text-align: left;
+    }
+
+
+.faixa ul {
+    width: auto;
+}
+
+.faixa-top {
+    left: 10px;
+}
+
+.faixa-middle {
+    display: inline-flex;
+    left: 0px;
+    position: absolute;
+    top: 0;
+}
+
+.faixa img {
+    height: 35px;
+}
+
+
+menu {
+    transform: translateX(0px);
+    height: 104px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    top: 51px;
+    width: 100%;
+    background-image: url("../img/bg_menu_mob.png");
+}
+.main {
+    padding-top: 50px;
+}
+
+.garrafa_mob{display: block;}
+.garrafa_desk{display: none;}
+
+.faixa .faixa-middle {
+    left: 50%;
+    margin-left: -117px;
+    margin-top: -12px !important;
+    padding-left: 0 !important;
+}
+
+.faixa .faixa-middle li{
+    margin-right: 57px;
+}
+
+.garrafa_mob img{
+    height: 38px;
+    margin-top: -4px;
+}
+
+.garrafa_mob .social{}
+
+.logo {
+    padding-bottom: 90px;
+    padding-top: 90px;
+}
+
+menu li a {
+    font-size: 9px;
+    margin-right: 13px;
+}
+
+.ng-scope .faixa-middle{
+    padding-left: 90px;
+    position: absolute;
+    margin-top: -50px;
+}
+
+.faixa-middle a > div {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#MenuSocialMob{margin-left: 110px;
+    margin-top: 25px;}
+#MenuSocialMob li{display: inline-block;}
+#MenuSocialMob li a{font-size: 31px;}
+
+}
 

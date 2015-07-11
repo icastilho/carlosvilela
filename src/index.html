@@ -43,7 +43,8 @@
     <ul class="faixa-middle">
         <li><a ng-href="#/portfolio" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">PORTFOLIO</p></div></a></li>
         <li><a ng-href="#/about" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">ABOUT</p></div></a></li>
-        <li>
+        <li class="garrafa_mob"><a ng-href="#/about" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">CONTACT</p></div></a></li>
+        <li class="garrafa_desk">
             <div class="social">
                 <ul >
                     <li><a href="http://br.linkedin.com/in/cvilela" target="_blank"><i class="fa fa-linkedin"></i></a></li>
@@ -55,15 +56,24 @@
             </div>
         </li>
     </ul>
+    <ul id="MenuSocialMob" class="garrafa_mob">
+        <li><a href="http://br.linkedin.com/in/cvilela" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://www.facebook.com/vileladesigner" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/carlosvilela_" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.behance.net/cvilela"  target="_blank"><i class="fa fa-behance"></i></a> </li>
+        <li><a href="https://www.pinterest.com/carlosvilela"  target="_blank"><i class="fa fa-pinterest"></i></a> </li>
+    </ul>
 </menu>
 <div class="faixa">
     <ul class="faixa-top">
-        <li ><a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a></li>
+        <li class="garrafa_desk"><a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a></li>
+        <li class="garrafa_mob"><a href="" class="toggle-navmob"><i class="fa fa-bars fa-2x"></i></a></li>
     </ul>
     <ul class="faixa-middle">
         <li><a ng-href="#/portfolio" title="Portfolio"><div><img src="img/port.png"></div></a></li>
         <li><a ng-href="#/about" title="About"><div><img src="img/about.png"></div></a></li>
-        <li ><a href="" class="toggle-nav" title="Social"><div class="social"><img src="img/social.png"></div></a></li>
+        <li class="garrafa_desk"><a href="" class="toggle-nav" title="Social"><div class="social"><img src="img/social.png"></div></a></li>
+        <li class="garrafa_mob" ><a href="" class="toggle-navmob" title="Social"><div class="social"><img src="img/social.png"></div></a></li>
     </ul>
 </div>
 <section class="main"  >

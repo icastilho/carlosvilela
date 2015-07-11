@@ -114,4 +114,46 @@
 }
 
 
+@media screen and (max-width: 480px){
 
+.diamond-box-inner {
+    transform: rotate(0deg);
+}
+
+.diamond-box {
+    transform: rotate(0deg);
+}
+
+.diamond-box-wrap {
+    height: 230px !important;
+    width: 230px !important;
+}
+
+.diamond-box {
+    border-width: 0 !important;
+}
+
+.diamond-box {
+    border: 0px solid transparent;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+.diamond-row-lower .diamond-box {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.diamond-row-lower {
+    position: relative;
+}
+
+.diamond-row-lower .diamond-box-wrap{
+    height: 460px !important;
+    width: 460px !important;
+}
+
+
+}
