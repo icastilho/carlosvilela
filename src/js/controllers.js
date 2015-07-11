@@ -4,16 +4,12 @@
 var controller = angular.module('carlosvilela.controller', []);
 
 controller
-   .controller('CarlosvilelaCtrl', function ($scope) {
 
-
-   })
    .controller('MenuCtrl', function ($scope) {
 
-       $scope.togglemenu = function(){ console.log('paous')
+       $scope.togglemenu = function(){
            $('html').toggleClass('menu-active');
        };
-
        $('.toggle-nav, .toggle-navmob').on('click touchstart', function(e){ console.log('padadasous')
            $('html').toggleClass('menu-active');
            e.preventDefault();
@@ -21,10 +17,8 @@ controller
    })
    .controller('AboutCtrl', function ($scope) {
 
-
    })
-   .controller('PortfolioCtrl', function ($scope, $window) {
-       console.log('PortfolioCtrl');
+   .controller('PortfolioCtrl', function ($scope) {
        $(".diamondswrap").diamonds({
            size: 440,
            gap: 1,
@@ -32,7 +26,6 @@ controller
            autoRedraw: true,
            itemSelector: ".item"
        });
-
 
        $('.item').hover(
           function(){
@@ -48,7 +41,6 @@ controller
    .controller('DetailCtrl', function ($scope, $stateParams, $location) {
 
        $scope.go = function ( path ) {
-           console.log(path);
            $location.path( path );
        };
 
@@ -75,7 +67,6 @@ controller
        }
 
        $scope.packeryInit = function () {
-           console.log('packeryInit');
            var $container = $('#container_mosaico').imagesLoaded( function(){
                $container.packery({
                    itemSelector: '.item',
@@ -90,7 +81,7 @@ controller
        var obj3d;
        $scope.Init3D = function () {
 
-           obj3d = $('.obj3d').ThreeSixty({
+           $scope.obj3d = obj3d = $('.obj3d').ThreeSixty({
                totalFrames: 60, // Total no. of image you have for 360 slider
                endFrame: 60, // end frame for the auto spin animation
                currentFrame: 1, // This the start frame for auto spin
@@ -101,16 +92,30 @@ controller
                ext: '.jpg', // extention for the assets
                height: 860,
                width: 480,
+               navigation: false,
                responsive: true,
                zeroPadding: true,
                onReady: function(){
-                   obj3d.play();
+                   //obj3d.play();
                }
            });
-           console.log('End 3D');
+
+           $('.custom_previous').bind('click', function(e) {
+               obj3d.previous();
+           });
+
+           $('.custom_next').bind('click', function(e) {
+               obj3d.next();
+           });
+
+           $('.custom_play').bind('click', function(e) {
+               obj3d.play();
+           });
+
+           $('.custom_stop').bind('click', function(e) {
+               obj3d.stop();
+           });
        };
-
-
    });
 
 

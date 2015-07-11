@@ -25,16 +25,15 @@
 
     <meta id="viewport" name='viewport'>
     <script>
-/*    (function(doc) {
+    (function(doc) {
         var viewport = document.getElementById('viewport');
-            if ( naviga}tor.usererAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)|| navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Linux/i) || navigator.userAgent.match(/CriOS/i) || navigator.userAgent.match(/Windows Phone/i)) {
+            if ( navigator.usererAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)|| navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Linux/i) || navigator.userAgent.match(/CriOS/i) || navigator.userAgent.match(/Windows Phone/i)) {
                 viewport.setAttribute("content", "width=480px, user-scalable=1");
             }else if ( navigator.userAgent.match(/iPad/i) ) {
                 viewport.setAttribute("content", "width=1280px, initial-scale=1, maximum-scale=1, user-scalable=0");
             }
 
-            /!*alert(navigator.userAgent)*!/
-        }(document));*/
+        }(document));
     </script>
 </head>
 
@@ -85,6 +84,7 @@
     <div ui-view class="view-animation" ></div>
 <!-- Content Body -->
 </section>
+<!--<script type="text/javascript" src="bower_components/zepto/zepto.min.js"></script>-->
 <script type="text/javascript" src="libs/angular/js/angular.js"></script>
 <script type="text/javascript" src="libs/angular-animate/js/angular-animate.js"></script>
 <script type="text/javascript" src="libs/angular-route/js/angular-route.js"></script>

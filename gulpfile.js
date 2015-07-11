@@ -2,11 +2,14 @@ var fs = require('fs');
 var path = require('path');
 
 var gulp = require('gulp');
+var gutil = require( 'gulp-util' );
 var plugins = require('gulp-load-plugins')(); // Load all gulp plugins
                                               // automatically and attach
                                               // them to the `plugins` object
 var runSequence = require('run-sequence');    // Temporary solution until gulp 4
                                               // https://github.com/gulpjs/gulp/issues/355
+//var ftp = require( 'vinyl-ftp' );
+var ftp = require('gulp-ftp');
 var pkg = require('./package.json');
 var dirs = pkg['h5bp-configs'].directories;
 
@@ -66,6 +69,7 @@ gulp.task('copy', [
     'copy:minify.libs',
     'copy:uglify',
     'copy:uglify.libs',
+    'copy:fonts',
     'copy:misc'
 ]);
 
@@ -96,10 +100,18 @@ gulp.task('copy:minify.libs', function () {
 
 });
 
+gulp.task('copy:fonts', function () {
+
+      gulp.src(dirs.src + '/libs/**/fonts/*')
+      .pipe(gulp.dest(dirs.dist + '/libs'));
+
+});
+
+
 gulp.task('copy:uglify', function () {
 
    return gulp.src(dirs.src + '/js/*.js')
-      .pipe(plugins.uglify())
+      //.pipe(plugins.uglify())
       .pipe(plugins.rename({ extname: '.min.js' }))
       .pipe(gulp.dest(dirs.dist + '/js'));
 
@@ -137,32 +149,45 @@ gulp.task('copy:misc', function () {
 });
 
 
+gulp.task('ftp', function () {
+   return gulp.src('dist/**')
+      .pipe(ftp({
+         host: 'ftp.studiolhama.com.br',
+         user: 'italo@studiolhama.com.br',
+         pass: '$uAFo&Bpmn11'
+      }))
+      // you need to have some kind of stream after gulp-ftp to make sure it's flushed
+      // this can be a gulp plugin, gulp.dest, or any kind of stream
+      // here we use a passthrough stream
+      .pipe(gutil.noop());
+});
+
 gulp.task( 'deploy', function() {
 
    var conn = ftp.create( {
       host:     'ftp.studiolhama.com.br',
-      user:     'italo@studiolhama.com.br',
+      user:        'italo@studiolhama.com.br',
       password: '$uAFo&Bpmn11',
-      parallel: 10,
+      parallel: 5,
       log: gutil.log
    } );
 
    var globs = [
-      dirs.dist + '/css/**',
-      dirs.dist + '/font/**',
-      dirs.dist + '/img/**',
-      dirs.dist + '/js/**',
-      dirs.dist + '/libs/**',
-      dirs.dist + '/views/**',
-      dirs.dist + '/index.html'
+      'dist/**',
+/*      '/css/!**',
+      '/font/!**',
+      '/img/!**',
+      '/js/!**',
+      '/libs/!**',
+      '/views/!**',*/
    ];
 
    // using base = '.' will transfer everything to /public_html correctly
    // turn off buffering in gulp.src for best performance
 
-   return gulp.src( globs, { base: '.', buffer: false } )
-      .pipe( conn.newer( dirs.dist ) ) // only upload newer files
-      .pipe( conn.dest( '/' ) );
+   return gulp.src( globs, {  base: '.', buffer: false } )
+      .pipe( conn.newer( '/' ) ) // only upload newer files
+      .pipe( conn.dest( './' ) );
 
 } );
 
