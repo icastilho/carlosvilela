@@ -4,113 +4,114 @@
 var controller = angular.module('carlosvilela.controller', []);
 
 controller
-    .controller('CarlosvilelaCtrl', function ($scope) {
+   .controller('CarlosvilelaCtrl', function ($scope) {
 
 
-    })
-    .controller('MenuCtrl', function ($scope) {
+   })
+   .controller('MenuCtrl', function ($scope) {
 
-        $scope.togglemenu = function(){
-            $('html').toggleClass('menu-active');
-        };
+       $scope.togglemenu = function(){ console.log('paous')
+           $('html').toggleClass('menu-active');
+       };
 
-        $('.toggle-nav').on('click touchstart', function(e){
-            $('html').toggleClass('menu-active');
-            e.preventDefault();
-        });
-    })
-    .controller('PortfolioCtrl', function ($scope, $window) {
-            console.log('PortfolioCtrl');
-            $(".diamondswrap").diamonds({
-                size: 440,
-                gap: 1,
-                hideIncompleteRow: false,
-                autoRedraw: true,
-                itemSelector: ".item"
-            });1000
+       $('.toggle-nav, .toggle-navmob').on('click touchstart', function(e){ console.log('padadasous')
+           $('html').toggleClass('menu-active');
+           e.preventDefault();
+       });
+   })
+   .controller('AboutCtrl', function ($scope) {
 
 
-        $('.item').hover(
-            function(){
-                $(this).find('img').addClass('dimond-box-img-hover');
-                $(this).parent().find('.itemhover').addClass('itemhoverdover');
-            },
-            function(){
-                $(this).parent().find('.itemhover').removeClass('itemhoverdover');
-                $(this).find('img').removeClass('dimond-box-img-hover');
-            });
-
-    })
-    .controller('DetailCtrl', function ($scope, $stateParams, $location) {
-
-        $scope.go = function ( path ) {
-            console.log(path);
-            $location.path( path );
-        };
-
-        $scope.item  = portifolios[$stateParams.id];
-        $scope.id = $stateParams.id;
-        var keys = Object.keys(portifolios);
-
-        var key = keys.indexOf($stateParams.id);
-
-        if(key === 0){
-            $scope.prevkey = keys[keys.length-1];
-            $scope.prev = portifolios[$scope.prevkey];
-        }else{
-            $scope.prevkey = keys[key -1];
-            $scope.prev = portifolios[$scope.prevkey];
-        }
-
-        if(key == keys.length-1){
-            $scope.nextkey = keys[0];
-            $scope.next = portifolios[ $scope.nextkey];
-        }else{
-            $scope.nextkey = keys[key + 1];
-            $scope.next = portifolios[$scope.nextkey];
-        }
+   })
+   .controller('PortfolioCtrl', function ($scope, $window) {
+       console.log('PortfolioCtrl');
+       $(".diamondswrap").diamonds({
+           size: 440,
+           gap: 1,
+           hideIncompleteRow: false,
+           autoRedraw: true,
+           itemSelector: ".item"
+       });
 
 
+       $('.item').hover(
+          function(){
+              $(this).find('img').addClass('dimond-box-img-hover');
+              $(this).parent().find('.itemhover').addClass('itemhoverdover');
+          },
+          function(){
+              $(this).parent().find('.itemhover').removeClass('itemhoverdover');
+              $(this).find('img').removeClass('dimond-box-img-hover');
+          });
+
+   })
+   .controller('DetailCtrl', function ($scope, $stateParams, $location) {
+
+       $scope.go = function ( path ) {
+           console.log(path);
+           $location.path( path );
+       };
+
+       $scope.item  = portifolios[$stateParams.id];
+       $scope.id = $stateParams.id;
+       var keys = Object.keys(portifolios);
+
+       var key = keys.indexOf($stateParams.id);
+
+       if(key === 0){
+           $scope.prevkey = keys[keys.length-1];
+           $scope.prev = portifolios[$scope.prevkey];
+       }else{
+           $scope.prevkey = keys[key -1];
+           $scope.prev = portifolios[$scope.prevkey];
+       }
+
+       if(key == keys.length-1){
+           $scope.nextkey = keys[0];
+           $scope.next = portifolios[ $scope.nextkey];
+       }else{
+           $scope.nextkey = keys[key + 1];
+           $scope.next = portifolios[$scope.nextkey];
+       }
+
+       $scope.packeryInit = function () {
+           console.log('packeryInit');
+           var $container = $('#container_mosaico').imagesLoaded( function(){
+               $container.packery({
+                   itemSelector: '.item',
+                   gutter: '.gutter-sizer',
+                   columnWidth: '.grid-sizer',
+                   rowHeight: '.grid-sizerheight',
+                   percentPosition: true
+               });
+           });
+       };
+
+       var obj3d;
+       $scope.Init3D = function () {
+
+           obj3d = $('.obj3d').ThreeSixty({
+               totalFrames: 60, // Total no. of image you have for 360 slider
+               endFrame: 60, // end frame for the auto spin animation
+               currentFrame: 1, // This the start frame for auto spin
+               imgList: '.threesixty_images', // selector for image list
+               progress: '.spinner', // selector to show the loading progress
+               imagePath:'img/portfolio/'+$stateParams.id+'/360/', // path of the image assets
+               //filePrefix: $stateParams.id+'_', // file prefix if any
+               ext: '.jpg', // extention for the assets
+               height: 860,
+               width: 480,
+               responsive: true,
+               zeroPadding: true,
+               onReady: function(){
+                   obj3d.play();
+               }
+           });
+           console.log('End 3D');
+       };
 
 
-        $scope.packeryInit = function () {
-            console.log('packeryInit');
-            var $container = $('#container_mosaico').imagesLoaded( function(){
-              $container.packery({
-                itemSelector: '.item',
-                gutter: '.gutter-sizer',
-                columnWidth: '.grid-sizer',
-                rowHeight: '.grid-sizerheight',
-                percentPosition: true
-              });
-            });
-        };
-
-        var obj3d;
-        $scope.Init3D = function () {
-
-            obj3d = $('.obj3d').ThreeSixty({
-                totalFrames: 60, // Total no. of image you have for 360 slider
-                endFrame: 60, // end frame for the auto spin animation
-                currentFrame: 1, // This the start frame for auto spin
-                imgList: '.threesixty_images', // selector for image list
-                progress: '.spinner', // selector to show the loading progress
-                imagePath:'img/portfolio/'+$stateParams.id+'/360/', // path of the image assets
-                //filePrefix: $stateParams.id+'_', // file prefix if any
-                ext: '.jpg', // extention for the assets
-                height: 860,
-                width: 480,
-                responsive: true,
-                zeroPadding: true,
-                onReady: function(){
-                    obj3d.play();
-                }
-            });
-            console.log('End 3D');
-        };
-
-
-    });
+   });
 
 
 var portifolios = {
