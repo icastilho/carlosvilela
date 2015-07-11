@@ -15,11 +15,6 @@ var carlosvilelaApp = angular.module('carlosvilela', [
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl'
             })
-            .state('test', {
-               url: '/test',
-               templateUrl: 'views/teste.html',
-               controller: 'CarlosvilelaCtrl'
-            })
             .state('portfolio', {
                 url: '/portfolio',
                 templateUrl: 'views/portfolio.html',
