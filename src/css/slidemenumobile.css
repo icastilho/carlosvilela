@@ -229,12 +229,11 @@ div.social ul li {
    }
 
    menu {
-      transform: translateX(0px);
       height: 104px;
       left: 0;
       margin: 0;
       padding: 0;
-      top: 51px;
+      top: 49px;
       width: 100%;
       background-image: url("../img/bg_menu_mob.png");
 
@@ -271,10 +270,10 @@ div.social ul li {
    }
    .menu-active header,
    .menu-active .main {
-      -webkit-transform: translateY(105px);
-      -moz-transform: translateY(105px);
-      -ms-transform: translateY(105px);
-      transform: translateY(105px);
+      -webkit-transform: translateY(104px);
+      -moz-transform: translateY(104px);
+      -ms-transform: translateY(104px);
+      transform: translateY(104px);
    }
 
    .main {
