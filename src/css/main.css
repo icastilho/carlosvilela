@@ -50,12 +50,81 @@ ul {
     text-align: left;
     width: 800px;
 }
+#OAbout{
+    height: 700px;
+    left: 50%;
+    margin-left: -640px;
+    margin-top: 40px;
+    position: relative;
+    width: 1280px;
+}
+#Face{
+    float: left;
+    width: 723px;
+}
+#Face img{}
+#About{
+    float: left;
+    margin-top: 71px;
+    width: 543px;
+}
+#About_Logo{}
+#About_Logo img{}
+#AboutTxtOpen{
+    font-family: 'montserratregular';
+}
+#AboutTxtOpen p{
+    font-size: 12px;
+    line-height: 19px;
+}
+#AboutChamada{
+    font-family: "montserratbold";
+    font-size: 26px;
+    margin-bottom: 5px;
+    margin-top: 70px;
+    text-transform: uppercase;
+}
+#AboutMais{
+    font-family: "montserrathairline";
+    font-style: italic;
+    margin-bottom: 60px;
+}
+#AboutContato{
+    font-family: "montserrathairline";
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
 
 @media screen and (max-width: 480px){
 
 body {
     margin: 0;
     padding: 0;
+}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+
+#OAbout {
+    margin-left: -454px;
+    width: 910px;
+}
+
+#Face {
+    width: 430px;
+}
+
+#About {
+    margin-top: 25px;
+    width: 463px;
+}
+
+#AboutContato {
+    font-size: 11px;
 }
 
 }
