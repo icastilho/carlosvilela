@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="This is a Carlos Vilela Portfolio">
-
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <title>Carlos Vilela Portfolio</title>
 
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css" >
-    <link rel="stylesheet" href="libs/threesixty-slider/css/threesixty.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/slidemenumobile.css">
-    <link rel="stylesheet" href="css/diamonds.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/portifolio-detail.css">
-    <link rel="stylesheet" href="css/portfolio.css">
-
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="libs/threesixty-slider/css/threesixty.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/slidemenumobile.min.css">
+    <link rel="stylesheet" href="css/diamonds.min.css">
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/footer.min.css">
+    <link rel="stylesheet" href="css/portifolio-detail.min.css">
+    <link rel="stylesheet" href="css/portfolio.min.css">
 
 </head>
 
@@ -29,7 +27,7 @@
 <![endif]-->
 
 <menu >
-    <ul class="faixa-middle">
+    <ul class="faixa-middle menu-top">
         <li><a ng-href="#/portfolio" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">PORTFOLIO</p></div></a></li>
         <li><a ng-href="#/about" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">ABOUT</p></div></a></li>
         <li class="garrafa_mob"><a ng-href="#/about" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">CONTACT</p></div></a></li>
@@ -54,11 +52,12 @@
     </ul>
 </menu>
 <div class="faixa">
-    <ul class="faixa-top" >
+    <ul class="faixa-top">
         <li class="garrafa_desk"><a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a></li>
         <li class="garrafa_mob"><a href="" class="toggle-navmob"><i class="fa fa-bars fa-2x"></i></a></li>
     </ul>
     <ul class="faixa-middle" >
+        <li class="garrafa_mob clickmenumob"><a href="" class="toggle-navmob"><div><i class="fa fa-bars fa-2x"></i></div></a></li>
         <li><a ng-href="#/portfolio" title="Portfolio" ng-click="togglefaixa()"><div><img src="img/port.png"></div></a></li>
         <li><a ng-href="#/about" title="About" ng-click="togglefaixa()" ><div><img src="img/about.png"></div></a></li>
         <li class="garrafa_desk"><a href="" class="toggle-nav" title="Social"><div class="social"><img src="img/social.png"></div></a></li>
@@ -70,25 +69,25 @@
     <div ui-view class="view-animation" ></div>
 <!-- Content Body -->
 </section>
-<script type="text/javascript" src="libs/angular/js/angular.js"></script>
-<script type="text/javascript" src="libs/angular-animate/js/angular-animate.js"></script>
-<script type="text/javascript" src="libs/angular-route/js/angular-route.js"></script>
-<script type="text/javascript" src="libs/angular-ui-router/js/angular-ui-router.js"></script>
-<script type="text/javascript" src="libs/jquery/js/jquery.js"></script>
-<script type="text/javascript" src="libs/jquery-ui/js/jquery-ui.js"></script>
-<script type="text/javascript" src="libs/packery/js/packery.pkgd.js"></script>
-<script type="text/javascript" src="libs/imagesloaded/js/imagesloaded.pkgd.js"></script>
-<script type="text/javascript" src="libs/threesixty-slider/js/threesixty.js"></script>
-<script type="text/javascript" src="js/jquery.diamonds.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="js/controllers.js"></script>
-<script type='text/javascript' src='js/jquery.reel.js' ></script>
+<script type="text/javascript" src="libs/angular/js/angular.min.js"></script>
+<script type="text/javascript" src="libs/angular-animate/js/angular-animate.min.js"></script>
+<script type="text/javascript" src="libs/angular-route/js/angular-route.min.js"></script>
+<script type="text/javascript" src="libs/angular-ui-router/js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="libs/jquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="libs/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="libs/packery/js/packery.pkgd.min.js"></script>
+<script type="text/javascript" src="libs/imagesloaded/js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="libs/threesixty-slider/js/threesixty.min.js"></script>
+<script type="text/javascript" src="js/jquery.diamonds.min.js"></script>
+<script type="text/javascript" src="js/app.min.js"></script>
+<script type="text/javascript" src="js/controllers.min.js"></script>
+<script type='text/javascript' src='js/jquery.reel.min.js' ></script>
 <script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
    /* (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
         e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
+        e.src='//www.google-analytics.com/analytics.min.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 */

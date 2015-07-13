@@ -1,132 +1,148 @@
-/* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
-
-body {
-
+body, ul {
     padding: 0;
+}
+body {
     color: #FFF;
-    background: #08213f url("../img/fundo_intermediario.jpg") repeat fixed 0 0;
-    margin: 0 0  0 60px;
+    background: url(../img/fundo_intermediario.jpg) fixed #08213f;
+    margin: 0 0 0 60px;
     overflow-x: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
 }
-a, a:active, a:focus {color: #FFF; text-decoration: none;}
-
+a, a:active, a:focus {
+    color: #FFF;
+    text-decoration: none;
+}
 ul {
     margin: 0;
-    padding: 0;
     list-style: none;
 }
-
 .view-animation.ng-enter {
-    -webkit-transition:1s linear all;
-    -moz-transition:1s linear all;
-    -o-transition:1s linear all;
-    transition:1s linear all;
-    opacity:0;
+    -webkit-transition: 1s linear all;
+    -moz-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    transition: 1s linear all;
+    opacity: 0;
 }
-
-.view-animation.ng-leave{
-    opacity:0;
+.view-animation.ng-leave {
+    opacity: 0;
 }
-.view-animation.ng-enter.ng-enter-active {
-    opacity:1;
+.view-animation.ng-enter.ng-enter-active, .view-animation.ng-leave.ng-leave-active {
+    opacity: 1;
 }
-.view-animation.ng-leave.ng-leave-active {
-    opacity:1;
-}
-
-
 .logo-flutuante {
     top: 0;
     right: 5%;
     position: absolute;
     float: right;
-
 }
-
 .about-content {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
     width: 800px;
 }
-#OAbout{
+#OAbout {
     height: 700px;
     left: 50%;
-    margin-left: -640px;
+    margin-left: -650px;
     margin-top: 40px;
     position: relative;
     width: 1280px;
 }
-#Face{
+#Face {
     float: left;
     width: 723px;
 }
-#Face img{}
-#About{
+#About {
     float: left;
     margin-top: 71px;
     width: 543px;
 }
-#About_Logo{}
-#About_Logo img{}
-#AboutTxtOpen{
-    font-family: 'montserratregular';
+#AboutTxtOpen {
+    font-family: montserratregular;
 }
-#AboutTxtOpen p{
+#AboutTxtOpen p {
     font-size: 12px;
     line-height: 19px;
 }
-#AboutChamada{
-    font-family: "montserratbold";
+#AboutChamada {
+    font-family: montserratbold;
     font-size: 26px;
     margin-bottom: 5px;
     margin-top: 70px;
     text-transform: uppercase;
 }
-#AboutMais{
-    font-family: "montserrathairline";
+#AboutContato, #AboutMais {
+    font-family: montserrathairline;
     font-style: italic;
+}
+#AboutMais {
     margin-bottom: 60px;
 }
-#AboutContato{
-    font-family: "montserrathairline";
+#AboutContato {
     font-size: 12px;
-    font-style: italic;
-    font-weight: bold;
-    letter-spacing: 0px;
+    font-weight: 700;
+    letter-spacing: 0;
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 480px){
-
-body {
-    margin: 0;
-    padding: 0;
+@media screen and (max-width:480px) {
+	.diamond-row-wrap,  .diamonds,  .diamondswrap  {
+	    overflow:  hidden;
+	    width:  100%;
+	}
+	#About {
+	    margin-top: 0;
+	    padding: 10px;
+	    width: auto;
+	}
+	#OAbout {
+	    height: auto;
+	    margin-bottom: 20px;
+	    margin-left: auto;
+	    margin-top: 20px;
+	    width: 100%;
+	    left: auto;
+	}
+	#Face {
+	    display:  none;
+	}
+	#NextImagem {
+	    display:  none;
+	}
+	body {
+	    margin: 0;
+	    padding: 0;
+	}
 }
 
+@media screen and (min-width:600px) and (max-width:1024px) {
+	#OAbout {
+	    margin-left: -454px;
+	    width: 910px;
+	}
+	#Face {
+	    width: 430px;
+	}
+	#About {
+	    margin-top: 25px;
+	    width: 463px;
+	}
+	#AboutContato {
+	    font-size: 11px;
+	}
 }
 
-@media screen and (min-width: 600px) and (max-width: 1024px){
-
-#OAbout {
-    margin-left: -454px;
-    width: 910px;
+@media screen and (min-width:1200px) and (max-width:1500px) {
+	#OAbout{
+	    height:  700px;
+	    left:  50%;
+	    margin-left:  -580px;
+	    margin-top:  40px;
+	    position:  relative;
+	    width:  1160px;
+	}
+	#Face{
+		width:  613px;
+	}
 }
-
-#Face {
-    width: 430px;
-}
-
-#About {
-    margin-top: 25px;
-    width: 463px;
-}
-
-#AboutContato {
-    font-size: 11px;
-}
-
-}
-
-

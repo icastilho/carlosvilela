@@ -1,331 +1,301 @@
-.main {
-
-
+.faixa, .faixa ul {
+    margin: 0;
+    padding: 0;
+}
+.faixa li a, menu li a {
+    color: #FFF;
+}
+.faixa li, .logo {
+    text-align: center;
 }
 .main p {
-   font-size: .9em;
-   line-height: 1.2em;
+    font-size: .9em;
+    line-height: 1.2em;
 }
-
 .faixa {
-   margin: 0;
-   position: fixed;
-   top: 0;
-   left: 0;
-   z-index: 10000;
-   width: 60px;
-   height: 100%;
-   padding: 0;
-   background: #01081e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 60px;
+    height: 100%;
+    background: #01081e;
 }
-
 .faixa ul {
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   list-style: none;
+    width: 100%;
+    list-style: none;
 }
-
 .faixa li {
-   margin-left: 2px;
-   margin-top: 30px;
-   margin-bottom: 30px;
-   text-align: center;
+    margin-left: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-
-.faixa li a {
-   color: #FFF;
+menu, menu>ul {
+    margin: 0;
+    padding: 0;
 }
-
 .faixa li a div:hover {
-   background-color:  #184072;
+    background-color: #184072;
 }
-
-.faixa li a:focus{
-
-}
-
-.faixa img{
-   vertical-align: middle;
+.faixa img {
+    vertical-align: middle;
 }
 .faixa-top {
-   position: absolute;
-   top: 0;
+    position: absolute;
+    top: 0;
 }
 .faixa-middle {
-   position: absolute;
-   top: 25%;
+    position: absolute;
+    top: 25%}
+.faixa-middle a>div {
+    height: 55px;
 }
-
-.faixa-middle a > div {
-   height: 55px;
-}
-
-.faixa-middle a > div > img, .faixa-middle a > div > p {
-   position: relative;
-   top: 50%;
-   transform: translateY(-50%);
-   -webkit-transform: translateY(-50%);
+.faixa-middle a>div>img, .faixa-middle a>div>p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 menu {
-   margin: 0;
-   padding: 0;
-   position: fixed;
-   top: 0;
-   left: 60px;
-   z-index: 1;
-   width: 170px;
-   height: 100%;
-   background-image: url("../img/fundomenu.png");
+    position: fixed;
+    top: 0;
+    left: 60px;
+    z-index: 1;
+    width: 170px;
+    height: 100%;
+    background-image: url(../img/fundomenu.png);
+    -webkit-transform: translateX(-170px);
+    -moz-transform: translateX(-170px);
+    -ms-transform: translateX(-170px);
+    transform: translateX(-170px);
+    transition: all .25s linear;
 }
-menu > ul {
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   list-style: none;
-
+.main, header, menu {
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
 }
-menu > ul > li {
-   margin-left: 4px;
-   margin-top: 30px;
-   margin-bottom: 30px;
+menu>ul {
+    width: 100%;
+    list-style: none;
+}
+menu>ul>li {
+    margin-left: 4px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 menu li a {
-   font-size: 18px;
-   display: block;
-   color: #FFF;
+    font-size: 18px;
+    display: block;
 }
 menu li a:hover {
-   color:  #317ffa;
-   text-decoration: none;
+    color: #317ffa;
+    text-decoration: none;
 }
-
-a:hover , header a:hover{
-   color: #FFF;
-   text-decoration: none;
+a:hover, header a:hover {
+    color: #FFF;
+    text-decoration: none;
 }
-
-menu li a:focus{
-   color: #317ffa;
+menu li a:focus {
+    color: #317ffa;
 }
-
-header a:focus{
-   color: #FFF;
+header a:focus {
+    color: #FFF;
 }
-
-
-/*
-    Aqui você esconde o menu para fora da tela
-    O valor é exatamente a largura da sidebar
-*/
-menu {
-   -webkit-transform: translateX(-170px);
-   -moz-transform: translateX(-170px);
-   -ms-transform: translateX(-170px);
-   transform: translateX(-170px);
-   -webkit-transition: all .25s linear;
-   -moz-transition: all .25s linear;
-   -ms-transition: all .25s linear;
-   transition: all .25s linear;
+.main, header {
+    -webkit-transform: translateX(60);
+    -moz-transform: translateX(60);
+    -ms-transform: translateX(60);
+    transform: translateX(60);
+    transition: all .25s linear;
 }
-
-/*
-    Essa é a posição original do HEADER e do MAIN
-*/
-header, .main {
-   -webkit-transform: translateX(60);
-   -moz-transform: translateX(60);
-   -ms-transform: translateX(60);
-   transform: translateX(60);
-   -webkit-transition: all .25s linear;
-   -moz-transition: all .25s linear;
-   -ms-transition: all .25s linear;
-   transition: all .25s linear;
-}
-
-/*
-   Com a classe menu-active na tag HTML
-*/
 .menu-active menu {
-   -webkit-transform: translateX(0);
-   -moz-transform: translateX(0);
-   -ms-transform: translateX(0);
-   transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
 }
-
-.menu-active header,
-.menu-active .main {
-   -webkit-transform: translateX(170px);
-   -moz-transform: translateX(170px);
-   -ms-transform: translateX(170px);
-   transform: translateX(170px);
+.menu-active .main, .menu-active header {
+    -webkit-transform: translateX(170px);
+    -moz-transform: translateX(170px);
+    -ms-transform: translateX(170px);
+    transform: translateX(170px);
 }
 .menu-active footer {
-   display: none;
+    display: none;
 }
-.menu-active #MosaicoProjetos{
-   padding-bottom: 10px;
+.menu-active #MosaicoProjetos {
+    padding-bottom: 10px;
 }
-
 .logo {
-   padding-bottom: 8%;
-   padding-top: 8%;
-   text-align: center;
-}
-
-
+    padding-bottom: 8%;
+    padding-top: 8%}
 .faixa-middle div.social {
-   height: 64px;
+    height: 64px;
 }
-
-.faixa-middle div.social ul{
-   position: relative;
-   top: 50%;
-   transform: translateY(-50%);
+.faixa-middle div.social ul {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
 div.social ul li {
-   display: inline-block;
-   padding-left: 4px;
-   padding-right: 4px;
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.garrafa_mob {
+    display: none !important;
+}
+.garrafa_desk {
+    display: block !important;
 }
 
-.garrafa_mob{display: none;}
-.garrafa_desk{display: block;}
+@media screen and (max-width:480px) {
+	.faixa {
+	    height: 50px;
+	    width: 100%;
+	    overflow: hidden;
+	}
+	.faixa li {
+	    margin-bottom: 0;
+	    margin-left: 6px;
+	    margin-right: 6px;
+	    margin-top: 9px;
+	    text-align: left;
+	}
+	.faixa ul {
+	    width: auto;
+	}
+	.faixa-top {
+	    left: 10px;
+	}
+	.faixa-middle {
+	    display:  block;
+	    left: 0;
+	    position: relative;
+	    top: 0;
+	    text-align: center;
+	}
+	.faixa img {
+	    height: 35px;
+	}
+	menu {
+	    height: 104px;
+	    left: 0;
+	    margin: 0;
+	    padding: 0;
+	    top: 49px;
+	    width: 100%;
+	    background-image: url(../img/bg_menu_mob.png);
+	    -webkit-transform: translateY(-105px);
+	    -moz-transform: translateY(-105px);
+	    -ms-transform: translateY(-105px);
+	    transform: translateY(-105px);
+	    transition: all .25s linear;
+	}
+	.main, header, menu {
+	    -webkit-transition: all .25s linear;
+	    -moz-transition: all .25s linear;
+	    -ms-transition: all .25s linear;
+	}
+	.main, header {
+	    transform: translateY(0);
+	    transition: all .25s linear;
+	}
+	.main, .menu-active menu, header {
+	    -webkit-transform: translateY(0);
+	    -moz-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	}
+	.menu-active menu {
+	    transform: translateY(0);
+	}
+	.menu-active .main, .menu-active header {
+	    -webkit-transform: translateY(104px);
+	    -moz-transform: translateY(104px);
+	    -ms-transform: translateY(104px);
+	    transform: translateY(104px);
+	}
+	.main {
+	    padding-top: 50px;
+	}
+	.garrafa_mob {
+	    display: inline-block !important;
+	}
+	.garrafa_desk {
+	    display: none !important;
+	}
+	.faixa .faixa-middle {
+	    margin-top: 0px!important;
+	    padding-left: 0!important;
+	}
+	.faixa .faixa-middle li {
+	    display: inline-block;
+	}
+	.garrafa_mob img {
+	    height: 38px;
+	    margin-top: -4px;
+	}
+	.logo {
+	    padding-bottom: 90px;
+	    padding-top: 90px;
+	}
+	menu li a {
+	    font-size: 9px;
+	    margin-right: 0px;
+	}
+	.ng-scope .faixa-middle {
+	    padding-left: 0px;
+	}
+	.faixa-middle a>div {
+	    padding-left: 10px;
+	    padding-right: 10px;
+	}
+	#MenuSocialMob {
+	    margin-left: 0px;
+	    margin-top: 9px;
+	    text-align: center;
+	}
+	#MenuSocialMob li {
+	    display: inline-block;
+	}
+	#MenuSocialMob li a {
+	    font-size: 31px;
+	}
 
+	.faixa-middle div.social {
+	    text-align: center;
+	    width: 40px;
+	}
+	.faixa-top{display: none;}
 
-@media screen and (max-width: 480px){
-   .faixa {
-      height: 50px;
-      width: 100%;
-      overflow: hidden;
-   }
+	menu > ul > li {
+    	display: inline-block;
+    }
+    menu > ul > li {
+	    margin-bottom: 0;
+	    margin-left: 4px;
+	    margin-top: 0;
+	}
+	menu .faixa-middle li{
 
-   .faixa li {
-      margin-bottom: 0;
-      margin-left: 0;
-      margin-top: 9px;
-      text-align: left;
-   }
-
-
-   .faixa ul {
-      width: auto;
-   }
-
-   .faixa-top {
-      left: 10px;
-   }
-
-   .faixa-middle {
-      display: inline-flex;
-      left: 0px;
-      position: absolute;
-      top: 0;
-   }
-
-   .faixa img {
-      height: 35px;
-   }
-
-   menu {
-      height: 104px;
-      left: 0;
-      margin: 0;
-      padding: 0;
-      top: 49px;
-      width: 100%;
-      background-image: url("../img/bg_menu_mob.png");
-
-   }
-
-   menu {
-
-      -webkit-transform: translateY(-105px);
-      -moz-transform: translateY(-105px);
-      -ms-transform: translateY(-105px);
-      transform: translateY(-105px);
-      -webkit-transition: all .25s linear;
-      -moz-transition: all .25s linear;
-      -ms-transition: all .25s linear;
-      transition: all .25s linear;
-   }
-
-   header, .main {
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-transition: all .25s linear;
-      -moz-transition: all .25s linear;
-      -ms-transition: all .25s linear;
-      transition: all .25s linear;
-   }
-
-   .menu-active menu {
-      -webkit-transform: translateY(0px);
-      -moz-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-      transform: translateY(0px);
-   }
-   .menu-active header,
-   .menu-active .main {
-      -webkit-transform: translateY(104px);
-      -moz-transform: translateY(104px);
-      -ms-transform: translateY(104px);
-      transform: translateY(104px);
-   }
-
-   .main {
-      padding-top: 50px;
-   }
-
-   .garrafa_mob{display: block;}
-   .garrafa_desk{display: none;}
-
-   .faixa .faixa-middle {
-      left: 50%;
-      margin-left: -117px;
-      margin-top: -12px !important;
-      padding-left: 0 !important;
-   }
-
-   .faixa .faixa-middle li{
-      margin-right: 57px;
-   }
-
-   .garrafa_mob img{
-      height: 38px;
-      margin-top: -4px;
-   }
-
-   .garrafa_mob .social{}
-
-   .logo {
-      padding-bottom: 90px;
-      padding-top: 90px;
-   }
-
-   menu li a {
-      font-size: 9px;
-      margin-right: 13px;
-   }
-
-   .ng-scope .faixa-middle{
-      padding-left: 90px;
-      position: absolute;
-      margin-top: -50px;
-   }
-
-   .faixa-middle a > div {
-      padding-left: 10px;
-      padding-right: 10px;
-   }
-
-   #MenuSocialMob{margin-left: 110px;
-      margin-top: 25px;}
-   #MenuSocialMob li{display: inline-block;}
-   #MenuSocialMob li a{font-size: 31px;}
+	}
+	.menu-top{margin-top: -18px;}
+	#MenuSocialMob li {
+	    margin-left: 10px;
+	    margin-right: 10px;
+	}
+	.faixa-middle a > div {
+		height: 60px;
+    	margin-top: -20px;
+	}
+	.clickmenumob{ height: 9px;
+    width: 48px;}
+	.clickmenumob i{
+		padding-top: 22px;
+    position: absolute;
+	}
+	.clickmenumob div{}
+	.clickmenumob a{}
 
 }
-

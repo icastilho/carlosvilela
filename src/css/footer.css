@@ -1,12 +1,15 @@
-/* A footer css */
-.footer{
-    background-image: url("../img/bg_base_proj.png");
+.footer {
+    background-image: url(../img/bg_base_proj.png);
     bottom: 0;
     position: fixed;
     width: 100%;
     opacity: 1;
     z-index: 1000;
     height: 170px;
+}
+.f-left, .f-right {
+    top: 0;
+    z-index: 50;
 }
 .f-container {
     position: relative;
@@ -20,29 +23,21 @@
 .f-container-content {
     padding-bottom: 20px;
     padding-top: 20px;
-    width: 100%;
-}
-
-/* Preview */
+    width: 100%}
 .f-preview {
     cursor: pointer;
     position: absolute;
-    height: 100%;
-}
+    height: 100%}
 .f-left {
     left: 0;
-    top: 0px;
-    z-index: 50;
 }
-.f-preview.f-left:hover #PrevImagem{
-    margin-left: 0px;
+.f-preview.f-left:hover #PrevImagem {
+    margin-left: 0;
 }
 .f-right {
     right: 60px;
-    top: 0;
-    z-index: 50;
 }
-.f-preview.f-right:hover #NextImagem{
+.f-preview.f-right:hover #NextImagem {
     margin-left: -221px;
 }
 .f-arrow {
@@ -53,11 +48,15 @@
     z-index: 10;
     display: table;
 }
-.f-arrow > div {
+.f-arrow>div {
     vertical-align: middle;
     display: table-cell;
 }
-.f-arrow > div > img{
+.foo-center, .foo-right {
+    float: left;
+    display: table;
+}
+.f-arrow>div>img {
     width: 6px;
 }
 .f-center {
@@ -65,19 +64,21 @@
     margin-top: 28px;
     text-align: center;
 }
-
-/* central content  */
-.f-left{
+.f-left {
     text-align: left;
 }
 .foo-ul li.line {
     width: auto;
 }
-.foo-ul li > ul > li {
+.foo-ul li>ul>li {
     width: auto;
     padding-left: 5px;
     padding-right: 5px;
     max-width: none;
+}
+#NextArrow, #PrevArrow {
+    padding-left: 5px;
+    padding-right: 8px;
 }
 .footer img {
     margin-left: 5px;
@@ -89,11 +90,9 @@
     width: 290px;
 }
 .foo-right {
-    color: #ffffff;
-    display: table;
+    color: #fff;
     height: 116px;
-    float: left;
-    font-family: "montserratbold";
+    font-family: montserratbold;
     font-size: 12px;
     letter-spacing: 1px;
     line-height: 27px;
@@ -101,68 +100,60 @@
     position: relative;
     width: 225px;
 }
-
-#Clear{
+#TitAbout, #TituloNextProj, #TituloPrevProj {
+    font-family: montserratregular;
+}
+#Clear {
     clear: both;
 }
-
-#BaseProjeto{
-    background-image: url("../img/bg_base_proj.png");
+#BaseProjeto {
+    background-image: url(../img/bg_base_proj.png);
     bottom: 0;
     position: fixed;
-    width: 100%;
-}
-
-#PrevProj{
+    width: 100%}
+#NextProj, #PrevArrow, #PrevProj {
+    z-index: 10;
     height: 100%;
+    position: absolute;
+}
+#PrevProj {
     left: 0;
-    position: absolute;
-    z-index: 10;
     cursor: pointer;
 }
-
-#NextProj{
-    height: 100%;
+#NextProj {
     right: 0;
-    position: absolute;
-    z-index: 10;
     cursor: pointer;
 }
-
-#PrevProj:hover #PrevImagem{
+#PrevProj:hover #PrevImagem {
     margin-left: 18px;
 }
-
-#PrevArrow{
+#PrevArrow {
     background: #2768ae;
-    height: 100%;
-    padding-left: 5px;
-    padding-right: 8px;
     padding-top: 54px;
-    position: absolute;
-    z-index: 10;
 }
-#PrevArrow img{width: 6px;}
-#PrevImagem{
+#NextArrow img, #PrevArrow img {
+    width: 6px;
+}
+#PrevImagem {
     background-position: center;
     background-size: cover;
+    margin-left: -350px;
+    transition: all .5s ease;
+}
+#NextImagem, #PrevImagem {
+    position: absolute;
     height: 100%;
     width: 250px;
     top: 0;
-    position: absolute;
-    margin-left: -350px;
-    -webkit-transition:all 0.5s ease;
-    -moz-transition:all 0.5s ease;
-    -o-transition:all 0.5s ease;
-    transition:all 0.5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
 }
-#PrevImagem img{}
-#TituloPrevProj{
+#TituloNextProj, #TituloPrevProj {
     background-color: #01081e;
     font-size: 12px;
     bottom: 0;
-    color: #ffffff;
-    font-family: "montserratregular";
+    color: #fff;
     font-style: italic;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -171,311 +162,227 @@
     width: 250px;
     text-transform: uppercase;
 }
-
-
-#NextProj:hover #NextImagem{
+#NextProj:hover #NextImagem {
     margin-right: 18px;
 }
-
-#NextArrow{
+#NextArrow {
     background: #2768ae;
     height: 100%;
-    padding-left: 5px;
-    padding-right: 8px;
     padding-top: 54px;
     position: absolute;
     right: 0;
     z-index: 10;
 }
-#NextArrow img{
-    width: 6px;
-}
-#NextImagem{
+#NextImagem {
     background-position: center;
     background-size: cover;
-    height: 100%;
-    width: 250px;
     margin-left: 30px;
-    top: 0;
-    position: absolute;
-    -webkit-transition:all 0.5s ease;
-    -moz-transition:all 0.5s ease;
-    -o-transition:all 0.5s ease;
-    transition:all 0.5s ease;
+    transition: all .5s ease;
 }
-#NextImagem img{}
-
-#TituloNextProj{
-    background-color: #01081e;
-    font-size: 12px;
-    bottom: 0;
-    color: #ffffff;
-    font-family: "montserratregular";
-    font-style: italic;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    position: absolute;
-    text-align: center;
-    width: 250px;
-    text-transform: uppercase;
-}
-
-#SobreProjeto{
+#SobreProjeto {
     left: 50%;
     position: absolute;
     width: 947px;
 }
-#TitProjeto{
+#TitProjeto {
     float: left;
     margin-top: 15px;
 }
-#TitProjeto img{ width: 100%;}
-#LinhaSepProj{
+#TitProjeto img {
+    width: 100%}
+#LinhaSepProj, #LinhaSepProj2 {
     float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    margin-top: 13px;
     overflow: hidden;
     width: 10px;
     height: 115px;
-    background-image: url("../img/divisao.png");
+    background-image: url(../img/divisao.png);
     background-repeat: no-repeat;
+    margin: 13px 10px 20px;
 }
-
-#LinhaSepProj2{
+#ConteudoProjeto img, #TitAbout {
+    width: 100%}
+#TitAbout {
     float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    margin-top: 13px;
-    overflow: hidden;
-    width: 10px;
-    height: 115px;
-    background-image: url("../img/divisao.png");
-    background-repeat: no-repeat;
-}
-
-
-#TitAbout{
-    float: left;
-    font-family: "montserratregular";
     font-size: 15px;
     margin-bottom: 10px;
-    width: 100%;
-
 }
-#TxtAbout{
-    font-family: "montserrathairline";
+#TxtAbout {
+    font-family: montserrathairline;
     font-size: 12px;
     font-style: italic;
 }
-.dadoFicha{
-    font-family: 'montserrathairline';
+.dadoFicha {
+    font-family: montserrathairline;
     font-size: 11px;
     font-style: italic;
 }
-
-
-
-#ConteudoProjeto{
-    background: none repeat scroll 0 0 #030d19;
+#ConteudoProjeto {
+    background: #030d19;
     padding-bottom: 133px;
 }
-#ConteudoProjeto img{ width: 100%;}
-
 p.fm-space0 {
     line-height: 0;
 }
-
-.foo-center{
-    float: left;
+.foo-center {
     margin-right: 10px;
     width: 270px;
-    display: table;
     height: 116px;
     margin-top: 12px;
 }
-#Video{ margin-bottom: -6px;}
-
-.cover{margin-bottom: -5px;}
-.dust-cover{margin-bottom: -5px;}
-
-/**
- * Media Queries
- * -----------------------------------------------------------------------------
- */
+#Video {
+    margin-bottom: -6px;
+}
+.cover, .dust-cover {
+    margin-bottom: -5px;
+}
 
 @-ms-viewport {
     width: device-width;
 }
+
 @viewport {
     width: device-width;
 }
 
-@media screen and (max-width: 480px){
-    #LinhaSepProj {
-        display: none;
-    }
-    #AjustaMob{clear: both;}
-    #TxtAbout {
-        font-size: 11px;
-    }
-
-    .foo-right {
-    color: #ffffff;
-    display: table;
-    float: left;
-    font-family: "montserratbold";
+@media screen and (max-width:480px) {
+    #TxtAbout, .foo-right {
     font-size: 11px;
+}
+#LinhaSepProj2, .foo-center {
+    background-image: url(../img/divisao.png);
+}
+#LinhaSepProj {
+    display: none;
+}
+.foo-center, .foo-right {
+    float: left;
+    display: table;
     height: auto;
+}
+#AjustaMob {
+    clear: both;
+}
+.foo-right {
+    color: #fff;
+    font-family: montserratbold;
     letter-spacing: 1px;
     line-height: 22px;
     margin-top: 13px;
     position: relative;
     width: 152px;
 }
-
-    .foo-center {
-        background-image: url("../img/divisao.png");
-        background-position: right center;
-        background-repeat: repeat-y;
-        display: table;
-        float: left;
-        height: auto;
-        margin: 12px 20px 20px -10px;
-        padding-right: 20px;
-        width: 170px;
-    }
-
-    #LinhaSepProj2 {
-        background-image: url("../img/divisao.png");
-        background-repeat: no-repeat;
-        float: left;
-        height: 138px;
-        margin: 13px 10px 20px;
-        overflow: hidden;
-        width: 10px;
-        display: none;
-    }
-
-    .f-container-center {
-        margin-left: -166px;
-        position: relative;
-        width: 355px;
-    }
-
-    .foo-left {
+.foo-center {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    padding: 10px;
+    width: auto;
+    margin-top: 30px;
+}
+#LinhaSepProj2 {
+    background-repeat: no-repeat;
+    float: left;
+    height: 138px;
+    margin: 13px 10px 20px;
+    overflow: hidden;
+    width: 10px;
+    display: none;
+}
+.f-container-center {
+    left: auto;
+    margin-left: auto;
+    position: relative;
+    width: 100%;
+}
+.foo-left {
     float: none;
-    width: 357px;
-    }
-
-    .footer {
-        height: auto;
-        position: relative;
-    }
-
-    .f-container-content {
+    width: 100%;
+    margin-top: -13px;
+}
+.footer {
+    height: auto;
+    position: relative;
+}
+.f-left, .f-right {
+    height: 150px;
+}
+.f-container-content {
     padding-bottom: 0;
     padding-top: 20px;
-    width: 100%;
-    }
-
-    .f-left {
-    height: 150px;
-    }
-    .f-right {
-    height: 150px;
-    right: 0px;
-    }
-    #Video iframe {
+    width: 100%}
+.f-right {
+    right: 0;
+}
+#Video iframe {
     height: 309px;
-    width: 100%;
-}
+    width: 100%}
+
+.foo-right {
+    margin-top: 0;
+    padding: 10px;
+    width: auto;
 }
 
-@media screen and (min-width: 1024px){
-#TxtAbout {
+p.fm-high {
+    font-size: 22px;
+}
+
+p.fm-small {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+p.fm-medium {
+    font-size: 17px;
+}
+
+.f-center {
+    color: #fff;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+
+}
+@media screen and (min-width:1024px) {
+    #TxtAbout {
     font-size: 11px;
 }
 #Video iframe {
     height: 689px;
-    width: 100%;
+    width: 100%}
 }
-}
-
-@media screen and (min-width: 1280px){
-#TxtAbout {
+@media screen and (min-width:1280px) {
+    #TxtAbout {
     font-size: 12px;
 }
 .f-container-center {
     margin-left: -540px;
     width: 1030px;
 }
-
 .foo-center {
     width: 430px;
 }
-
 #Video iframe {
     height: 929px;
-    width: 100%;
+    width: 100%}
 }
-
-}
-@media screen and (min-width: 1366px) {
-    #Video iframe {
-        height: 989px;
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 1366px) {
+@media screen and (min-width:1366px) {
     #Video iframe {
     height: 1039px;
-    width: 100%;
-    }
+    width: 100%}
 }
-
-
-
-
-@media screen and (min-width: 1600px) {
+@media screen and (min-width:1600px) {
     #Video iframe {
-    height: 1159px;
-    width: 100%;
-    }
+    height: 1219px;
+    width: 100%}
 }
-
-@media screen and (min-width: 1600px) {
+@media screen and (min-width:1920px) {
     #Video iframe {
-        height: 1219px;
-        width: 100%;
-    }
+    height: 1399px;
+    width: 100%}
 }
-
-@media screen and (min-width: 1920px) {
+@media screen and (min-width:2560px) {
     #Video iframe {
-        height: 1399px;
-        width: 100%;
-    }
-}
-
-
-@media screen and (min-width: 2560px) {
-    #Video iframe {
-        height: 1444px;
-        width: 100%;
-    }
-}
-
-
-
-/**
- * 12.0 Print
- * -----------------------------------------------------------------------------
- */
-
-@media print {} .echo {
-
+    height: 1444px;
+    width: 100%}
 }
