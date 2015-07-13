@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="This is a Carlos Vilela Portfolio">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <title>Carlos Vilela Portfolio</title>
-    <!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >-->
+
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css" >
     <link rel="stylesheet" href="libs/threesixty-slider/css/threesixty.css">
-
-
-  <!-- build:css -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/slidemenumobile.css">
     <link rel="stylesheet" href="css/diamonds.css">
@@ -21,28 +18,17 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/portifolio-detail.css">
     <link rel="stylesheet" href="css/portfolio.css">
-  <!-- endbuild -->
 
-    <meta id="viewport" name='viewport'>
-    <script>
-    (function(doc) {
-        var viewport = document.getElementById('viewport');
-            if ( navigator.usererAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)|| navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Linux/i) || navigator.userAgent.match(/CriOS/i) || navigator.userAgent.match(/Windows Phone/i)) {
-                viewport.setAttribute("content", "width=480px, user-scalable=1");
-            }else if ( navigator.userAgent.match(/iPad/i) ) {
-                viewport.setAttribute("content", "width=1280px, initial-scale=1, maximum-scale=1, user-scalable=0");
-            }
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 
-        }(document));
-    </script>
 </head>
 
-<body>
+<body ng-controller="MenuCtrl">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<menu ng-controller="MenuCtrl">
+<menu >
     <ul class="faixa-middle">
         <li><a ng-href="#/portfolio" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">PORTFOLIO</p></div></a></li>
         <li><a ng-href="#/about" ng-click="togglemenu()"><div><p class="fm-regular fm-italic fm-space-low">ABOUT</p></div></a></li>
@@ -68,13 +54,13 @@
     </ul>
 </menu>
 <div class="faixa">
-    <ul class="faixa-top">
+    <ul class="faixa-top" >
         <li class="garrafa_desk"><a href="" class="toggle-nav"><i class="fa fa-bars fa-2x"></i></a></li>
         <li class="garrafa_mob"><a href="" class="toggle-navmob"><i class="fa fa-bars fa-2x"></i></a></li>
     </ul>
-    <ul class="faixa-middle">
-        <li><a ng-href="#/portfolio" title="Portfolio"><div><img src="img/port.png"></div></a></li>
-        <li><a ng-href="#/about" title="About"><div><img src="img/about.png"></div></a></li>
+    <ul class="faixa-middle" >
+        <li><a ng-href="#/portfolio" title="Portfolio" ng-click="togglefaixa()"><div><img src="img/port.png"></div></a></li>
+        <li><a ng-href="#/about" title="About" ng-click="togglefaixa()" ><div><img src="img/about.png"></div></a></li>
         <li class="garrafa_desk"><a href="" class="toggle-nav" title="Social"><div class="social"><img src="img/social.png"></div></a></li>
         <li class="garrafa_mob" ><a href="" class="toggle-navmob" title="Social"><div class="social"><img src="img/social.png"></div></a></li>
     </ul>
@@ -84,7 +70,6 @@
     <div ui-view class="view-animation" ></div>
 <!-- Content Body -->
 </section>
-<!--<script type="text/javascript" src="bower_components/zepto/zepto.min.js"></script>-->
 <script type="text/javascript" src="libs/angular/js/angular.js"></script>
 <script type="text/javascript" src="libs/angular-animate/js/angular-animate.js"></script>
 <script type="text/javascript" src="libs/angular-route/js/angular-route.js"></script>

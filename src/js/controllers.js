@@ -5,12 +5,15 @@ var controller = angular.module('carlosvilela.controller', []);
 
 controller
 
-   .controller('MenuCtrl', function ($scope) {
-
-       $scope.togglemenu = function(){
+   .controller('MenuCtrl', function ($scope, $location) {
+       $scope.togglefaixa = function(){console.log('togglefaixa');
+           if($('.menu-active').length > 0)
+                $('html').toggleClass('menu-active');
+       };
+       $scope.togglemenu = function(){ console.log('togglemenu');
            $('html').toggleClass('menu-active');
        };
-       $('.toggle-nav, .toggle-navmob').on('click touchstart', function(e){ console.log('padadasous')
+       $('.toggle-nav, .toggle-navmob').on('click touchstart', function(e){ console.log('on click');
            $('html').toggleClass('menu-active');
            e.preventDefault();
        });
@@ -20,7 +23,7 @@ controller
    })
    .controller('PortfolioCtrl', function ($scope) {
        $(".diamondswrap").diamonds({
-           size: 440,
+           size: 350,
            gap: 1,
            hideIncompleteRow: false,
            autoRedraw: true,
@@ -98,22 +101,6 @@ controller
                onReady: function(){
                    //obj3d.play();
                }
-           });
-
-           $('.custom_previous').bind('click', function(e) {
-               obj3d.previous();
-           });
-
-           $('.custom_next').bind('click', function(e) {
-               obj3d.next();
-           });
-
-           $('.custom_play').bind('click', function(e) {
-               obj3d.play();
-           });
-
-           $('.custom_stop').bind('click', function(e) {
-               obj3d.stop();
            });
        };
    });

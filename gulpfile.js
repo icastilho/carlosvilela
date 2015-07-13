@@ -76,7 +76,7 @@ gulp.task('copy', [
 
 gulp.task('copy:index.html', function () {
     return gulp.src(dirs.src + '/index.html')
-       .pipe(plugins.replace(/{{JQUERY_VERSION}}/g, pkg.devDependencies.jquery))
+       .pipe(plugins.replace('/{{JQUERY_VERSION}}/g', pkg.devDependencies.jquery))
        .pipe(plugins.replace(/\.js/g, '.min.js'))
        .pipe(plugins.replace(/\.css/g, '.min.css'))
        .pipe(gulp.dest(dirs.dist));
@@ -135,6 +135,7 @@ gulp.task('copy:misc', function () {
         // Exclude the following files
         // (other tasks will handle the copying of these files)
         '!' + dirs.src + '/css/*',
+        '!' + dirs.src + '/img/**',
         '!' + dirs.src + '/js/*',
         '!' + dirs.src + '/libs/**/*',
         '!' + dirs.src + '/index.html',
@@ -147,6 +148,16 @@ gulp.task('copy:misc', function () {
 
     }).pipe(gulp.dest(dirs.dist));
 });
+
+
+gulp.task('copy:images', function () {
+   return gulp.src([
+      // Copy all images
+      dirs.src + '/img/*'
+   ], {
+   }).pipe(gulp.dest(dirs.dist+'/img/'));
+});
+
 
 
 gulp.task('ftp', function () {
@@ -174,12 +185,6 @@ gulp.task( 'deploy', function() {
 
    var globs = [
       'dist/**',
-/*      '/css/!**',
-      '/font/!**',
-      '/img/!**',
-      '/js/!**',
-      '/libs/!**',
-      '/views/!**',*/
    ];
 
    // using base = '.' will transfer everything to /public_html correctly
