@@ -3,7 +3,7 @@
 A Portfolio Site of Carlos Vilela Design
 
 * Source: [https://github.com/icastilho/carlosvilela](https://github.com/icastilho/carlosvilela)
-* Homepage: [http://carlosvilela.com.br preview](http://carlosvilela.com.br/new/carlosvilela/src)
+* Homepage: [http://carlosvilela.com.br preview](http://carlosvilela.com.br/)
 * Twitter: [@carlosvilela_](https://twitter.com/carlosvilela_)
 
 
